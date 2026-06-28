@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="English-speaking psychologist in Berlin. Online therapy worldwide. For expats, LGBTQIA+ people and neurodivergent individuals. Sessions in English, German and Portuguese.">
+<meta property="og:title" content="D Wiltshire Soares - Psychologist & Therapist in Berlin">
+<meta property="og:description" content="Therapy in English, German and Portuguese. Online worldwide. Sliding scale from 70 EUR.">
+<meta name="robots" content="index, follow">
+<link rel="alternate" hreflang="en" href="https://dwsoares.com/">
+<link rel="alternate" hreflang="de" href="https://dwsoares.com/">
+<link rel="alternate" hreflang="pt" href="https://dwsoares.com/">
+<title>D Wiltshire Soares - Psychologist & Therapist - Berlin - Online</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "D Wiltshire Soares",
+  "jobTitle": "Psychologist and Systemic Therapist",
+  "url": "https://dwsoares.com",
+  "address": {"@type": "PostalAddress", "addressLocality": "Berlin", "addressCountry": "DE"},
+  "knowsLanguage": ["en", "de", "pt"],
+  "offers": {
+    "@type": "Service",
+    "name": "Psychotherapy and counselling",
+    "areaServed": ["Berlin", "Online worldwide"],
+    "priceRange": "70-130 EUR"
+  }
+}
+</script>
+<style>
+  :root {
+    --sand:        #b5a898;
+    --sand-light:  #e6ddd5;
+    --sand-lighter:#f3ede8;
+    --sand-dark:   #8c7b6e;
+    --char:        #2b2f2c;
+    --char-mid:    #4a4f48;
+    --char-light:  #6b706a;
+    --off-white:   #faf7f4;
+    --green-border:#8db893;
+    --r:           8px;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--off-white);
+    color: var(--char);
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--sand-dark);
+    font-weight: 500;
+  }
+  .serif { font-family: 'DM Serif Display', serif; }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; width: 100%; }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--off-white);
+    border-bottom: 0.5px solid var(--sand-light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+    height: 60px;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; }
+  .nav-logo svg { width: 30px; height: 30px; }
+  .logo-name {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--char);
+    line-height: 1.15;
+  }
+  .logo-sub {
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sand-dark);
+  }
+  .nav-right { display: flex; align-items: center; gap: 28px; }
+  .nav-links { display: flex; gap: 22px; list-style: none; }
+  .nav-links a { font-size: 12px; color: var(--char-light); letter-spacing: 0.02em; transition: color .2s; }
+  .nav-links a:hover { color: var(--char); }
+  .lang-switcher {
+    display: flex;
+    gap: 3px;
+    padding-left: 18px;
+    border-left: 0.5px solid var(--sand-light);
+  }
+  .lang-btn {
+    font-size: 11px;
+    font-family: 'DM Sans', sans-serif;
+    padding: 4px 9px;
+    border: 0.5px solid var(--sand-light);
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--char-light);
+    background: transparent;
+    transition: all .2s;
+    letter-spacing: 0.04em;
+  }
+  .lang-btn:hover { border-color: var(--sand); color: var(--char); }
+  .lang-btn.active { background: var(--char); color: var(--off-white); border-color: var(--char); font-weight: 500; }
+  .nav-cta {
+    font-size: 12px;
+    font-family: 'DM Sans', sans-serif;
+    padding: 8px 16px;
+    background: var(--char);
+    color: var(--off-white);
+    border: none;
+    border-radius: var(--r);
+    cursor: pointer;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: opacity .2s;
+  }
+  .nav-cta:hover { opacity: .85; }
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+  .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--char); }
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 60px; left: 0; right: 0;
+    background: var(--off-white);
+    border-bottom: 0.5px solid var(--sand-light);
+    padding: 20px 5vw;
+    z-index: 99;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { font-size: 15px; color: var(--char-mid); padding: 6px 0; border-bottom: 0.5px solid var(--sand-light); }
+  .mobile-lang { display: flex; gap: 8px; padding-top: 4px; }
+
+  /* AVAILABILITY BAR */
+  .avail-bar {
+    background: var(--char);
+    padding: 9px 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .avail-left { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #b8b4b0; }
+  .avail-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: #7ec88a;
+    flex-shrink: 0;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
+  .avail-cta {
+    font-size: 11px;
+    font-family: 'DM Sans', sans-serif;
+    padding: 4px 14px;
+    border: 0.5px solid #5a5856;
+    border-radius: 4px;
+    color: #f2ede8;
+    background: transparent;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: border-color .2s;
+  }
+  .avail-cta:hover { border-color: #9a9690; }
+
+  /* LANG HINT */
+  .lang-hint {
+    background: #f0ebe4;
+    border-bottom: 0.5px solid var(--sand-light);
+    padding: 8px 5vw;
+    font-size: 11px;
+    color: var(--char-light);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .lang-hint strong { color: var(--char); cursor: pointer; border-bottom: 0.5px solid var(--char-light); }
+
+  /* HERO */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 520px;
+    background: var(--sand-lighter);
+  }
+  .hero-text {
+    padding: 64px 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    max-width: 560px;
+  }
+  .hero-h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(30px, 3.8vw, 46px);
+    line-height: 1.15;
+    color: var(--char);
+    font-weight: 400;
+  }
+  .hero-h1 em { font-style: italic; color: var(--sand-dark); }
+  .hero-sub { font-size: 15px; color: var(--char-mid); line-height: 1.7; max-width: 400px; }
+  .hero-ctas { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+  .btn-primary {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    padding: 11px 22px;
+    background: var(--char);
+    color: var(--off-white);
+    border: none;
+    border-radius: var(--r);
+    cursor: pointer;
+    font-weight: 500;
+    transition: opacity .2s;
+  }
+  .btn-primary:hover { opacity: .85; }
+  .btn-outline {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    padding: 11px 22px;
+    background: transparent;
+    color: var(--char);
+    border: 0.5px solid var(--char);
+    border-radius: var(--r);
+    cursor: pointer;
+    transition: background .2s;
+  }
+  .btn-outline:hover { background: rgba(43,47,44,.06); }
+  .hero-langs { display: flex; gap: 6px; flex-wrap: wrap; }
+  .lang-pill {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 0.5px solid var(--sand);
+    color: var(--sand-dark);
+    background: var(--off-white);
+  }
+  .hero-img {
+    background: var(--sand);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Replace this div with an <img> tag when photo is ready */
+  .hero-img-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    opacity: .4;
+  }
+  .hero-img-placeholder svg { width: 64px; }
+  .photo-label {
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--char);
+    text-align: center;
+  }
+
+  /* TRUST BAR */
+  .trust-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 0.5px solid var(--sand-light);
+  }
+  .trust-item {
+    padding: 18px 5vw;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-right: 0.5px solid var(--sand-light);
+  }
+  .trust-item:last-child { border-right: none; }
+  .trust-icon {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--sand-lighter);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 16px;
+  }
+  .trust-title { font-size: 12px; font-weight: 500; color: var(--char); margin-bottom: 2px; }
+  .trust-sub { font-size: 11px; color: var(--char-light); line-height: 1.4; }
+
+  /* ONLINE */
+  .online-section {
+    background: var(--char);
+    padding: 28px 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .online-left { display: flex; align-items: center; gap: 18px; }
+  .online-icon-box {
+    width: 48px; height: 48px;
+    border-radius: 10px;
+    border: 0.5px solid #4a5048;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 22px;
+  }
+  .online-title { font-size: 15px; font-weight: 500; color: var(--off-white); margin-bottom: 4px; }
+  .online-desc { font-size: 12px; color: #9a9690; line-height: 1.5; }
+  .online-badges { display: flex; gap: 8px; flex-wrap: wrap; }
+  .badge {
+    font-size: 11px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 0.5px solid #4a5048;
+    color: #c8c4c0;
+  }
+  .badge-green {
+    border-color: var(--green-border);
+    color: #7ec88a;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .badge-green::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #7ec88a;
+  }
+
+  /* APPROACHES */
+  .approaches { padding: 64px 5vw; background: var(--off-white); }
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(24px, 3vw, 34px);
+    font-weight: 400;
+    color: var(--char);
+    line-height: 1.2;
+    margin-top: 8px;
+  }
+  .approaches-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 32px; }
+  .approach-card {
+    padding: 22px;
+    border: 0.5px solid var(--sand-light);
+    border-radius: 12px;
+    background: var(--off-white);
+    transition: border-color .2s;
+  }
+  .approach-card:hover { border-color: var(--sand); }
+  .approach-num { font-size: 11px; font-weight: 500; color: var(--sand); margin-bottom: 10px; letter-spacing: 0.08em; }
+  .approach-name { font-size: 14px; font-weight: 500; color: var(--char); margin-bottom: 8px; line-height: 1.3; }
+  .approach-desc { font-size: 12px; color: var(--char-light); line-height: 1.6; }
+
+  /* ABOUT */
+  .about {
+    padding: 64px 5vw;
+    background: var(--sand-lighter);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .about-img {
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--sand);
+    aspect-ratio: 4/5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-img-inner { display: flex; flex-direction: column; align-items: center; gap: 10px; opacity: .4; }
+  .about-text { display: flex; flex-direction: column; gap: 18px; }
+  .about-body { font-size: 15px; color: var(--char-mid); line-height: 1.75; }
+  .about-detail { font-size: 13px; color: var(--char-light); line-height: 1.7; }
+  .credentials { display: flex; flex-direction: column; gap: 8px; padding-top: 4px; }
+  .credential { display: flex; align-items: flex-start; gap: 10px; font-size: 12px; color: var(--char-light); line-height: 1.45; }
+  .cred-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--sand); margin-top: 6px; flex-shrink: 0; }
+
+  /* WELCOME */
+  .welcome-section {
+    padding: 48px 5vw;
+    background: var(--off-white);
+    border-top: 0.5px solid var(--sand-light);
+    border-bottom: 0.5px solid var(--sand-light);
+  }
+  .welcome-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 24px; }
+  .welcome-card {
+    padding: 16px 18px;
+    border: 0.5px solid var(--sand-light);
+    border-radius: 10px;
+    background: var(--off-white);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .welcome-icon { font-size: 18px; flex-shrink: 0; }
+  .welcome-label { font-size: 12px; color: var(--char-mid); }
+  .decolonial-note {
+    margin-top: 20px;
+    padding: 14px 18px;
+    background: var(--sand-lighter);
+    border-radius: 8px;
+    font-size: 12px;
+    color: var(--char-light);
+    line-height: 1.6;
+    border-left: 2px solid var(--sand);
+  }
+
+  /* PRICING */
+  .pricing { padding: 64px 5vw; background: var(--sand-lighter); }
+  .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+  .price-card {
+    padding: 28px;
+    border: 0.5px solid var(--sand-light);
+    border-radius: 12px;
+    background: var(--off-white);
+  }
+  .price-type { font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--sand-dark); margin-bottom: 14px; font-weight: 500; }
+  .price-amount { font-family: 'DM Serif Display', serif; font-size: 40px; color: var(--char); line-height: 1; margin-bottom: 2px; }
+  .price-duration { font-size: 13px; color: var(--char-light); margin-bottom: 14px; }
+  .price-desc { font-size: 13px; color: var(--char-mid); line-height: 1.6; border-top: 0.5px solid var(--sand-light); padding-top: 14px; margin-top: 14px; }
+  .sliding-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    padding: 4px 11px;
+    border-radius: 20px;
+    background: var(--sand-lighter);
+    border: 0.5px solid var(--sand-light);
+    color: var(--sand-dark);
+    margin-top: 12px;
+  }
+
+  /* SOCIAL PROOF */
+  .social-proof { padding: 64px 5vw; background: var(--off-white); }
+  .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 32px; }
+  .review-card {
+    padding: 22px;
+    border: 0.5px solid var(--sand-light);
+    border-radius: 12px;
+    background: var(--off-white);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .review-stars { font-size: 13px; color: var(--sand); letter-spacing: 2px; }
+  .review-text { font-family: 'DM Serif Display', serif; font-size: 15px; color: var(--char); line-height: 1.55; font-style: italic; flex: 1; }
+  .review-author { font-size: 11px; color: var(--char-light); }
+  .press-bar {
+    margin-top: 40px;
+    padding-top: 28px;
+    border-top: 0.5px solid var(--sand-light);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .press-label { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sand-dark); white-space: nowrap; }
+  .press-links { display: flex; gap: 14px; flex-wrap: wrap; }
+  .press-link { font-size: 12px; color: var(--char-mid); border-bottom: 0.5px solid var(--sand-light); padding-bottom: 1px; transition: border-color .2s; }
+  .press-link:hover { border-color: var(--char-mid); }
+
+  /* CONTACT */
+  .contact {
+    padding: 64px 5vw;
+    background: var(--sand-lighter);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+  .contact-intro { display: flex; flex-direction: column; gap: 18px; }
+  .contact-body { font-size: 15px; color: var(--char-mid); line-height: 1.7; }
+  .contact-detail { font-size: 13px; color: var(--char-light); line-height: 1.7; }
+  form { display: flex; flex-direction: column; gap: 14px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  label { display: flex; flex-direction: column; gap: 5px; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--char-light); font-weight: 500; }
+  input, select, textarea {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    padding: 10px 14px;
+    border: 0.5px solid var(--sand-light);
+    border-radius: var(--r);
+    background: var(--off-white);
+    color: var(--char);
+    transition: border-color .2s;
+    outline: none;
+    width: 100%;
+  }
+  input:focus, select:focus, textarea:focus { border-color: var(--sand); }
+  textarea { resize: vertical; min-height: 100px; }
+  select { appearance: none; cursor: pointer; }
+  .form-note { font-size: 11px; color: var(--char-light); line-height: 1.55; }
+  .form-submit {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    padding: 13px 24px;
+    background: var(--char);
+    color: var(--off-white);
+    border: none;
+    border-radius: var(--r);
+    cursor: pointer;
+    font-weight: 500;
+    align-self: flex-start;
+    transition: opacity .2s;
+  }
+  .form-submit:hover { opacity: .85; }
+
+  /* FOOTER CTA */
+  .footer-cta {
+    background: var(--char);
+    padding: 40px 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .footer-cta-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(20px, 2.5vw, 28px);
+    color: var(--off-white);
+    font-weight: 400;
+    margin-bottom: 6px;
+    line-height: 1.25;
+  }
+  .footer-cta-sub { font-size: 13px; color: #9a9690; }
+  .btn-sand {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    padding: 12px 24px;
+    background: var(--sand-lighter);
+    color: var(--char);
+    border: none;
+    border-radius: var(--r);
+    cursor: pointer;
+    font-weight: 500;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: opacity .2s;
+  }
+  .btn-sand:hover { opacity: .85; }
+
+  /* FOOTER */
+  footer {
+    background: var(--char);
+    border-top: 0.5px solid #3a3f3c;
+    padding: 24px 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
+  .footer-links a { font-size: 11px; color: #6b706a; letter-spacing: 0.04em; transition: color .2s; }
+  .footer-links a:hover { color: #9a9690; }
+  .footer-copy { font-size: 11px; color: #6b706a; }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .nav-links, .nav-cta { display: none; }
+    .hamburger { display: flex; }
+    .lang-switcher { display: none; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-img { min-height: 260px; order: -1; }
+    .hero-img-placeholder { min-height: 260px; }
+    .hero-text { padding: 36px 5vw; }
+    .trust-bar { grid-template-columns: 1fr; }
+    .trust-item { border-right: none; border-bottom: 0.5px solid var(--sand-light); }
+    .trust-item:last-child { border-bottom: none; }
+    .approaches-grid { grid-template-columns: 1fr; }
+    .about { grid-template-columns: 1fr; gap: 28px; }
+    .about-img { aspect-ratio: 4/3; }
+    .pricing-grid { grid-template-columns: 1fr; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .contact { grid-template-columns: 1fr; gap: 32px; }
+    .form-row { grid-template-columns: 1fr; }
+    .avail-bar { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .online-section { flex-direction: column; align-items: flex-start; }
+    .footer-cta { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M15 2.5C15 2.5 7.5 8.8 7.5 16.5C7.5 20.9 10.9 24.5 15 24.5C19.1 24.5 22.5 20.9 22.5 16.5C22.5 8.8 15 2.5 15 2.5Z" stroke="#2b2f2c" stroke-width="1.2" fill="none"/>
+      <line x1="15" y1="24.5" x2="15" y2="9.5" stroke="#2b2f2c" stroke-width="1.1"/>
+      <line x1="15" y1="19" x2="11" y2="15" stroke="#2b2f2c" stroke-width="1.1"/>
+      <line x1="15" y1="19" x2="19" y2="15" stroke="#2b2f2c" stroke-width="1.1"/>
+      <line x1="15" y1="14" x2="12" y2="11" stroke="#2b2f2c" stroke-width="1.1"/>
+      <line x1="15" y1="14" x2="18" y2="11" stroke="#2b2f2c" stroke-width="1.1"/>
+    </svg>
+    <div>
+      <div class="logo-name" data-i18n="logoName">D Wiltshire Soares</div>
+      <div class="logo-sub" data-i18n="logoSub">Systemic Therapy</div>
+    </div>
+  </div>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#therapy" data-i18n="navTherapy">Therapy</a></li>
+      <li><a href="#about" data-i18n="navAbout">About</a></li>
+      <li><a href="#pricing" data-i18n="navPricing">Prices</a></li>
+      <li><a href="#contact" data-i18n="navContact">Contact</a></li>
+    </ul>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('de')">DE</button>
+      <button class="lang-btn" onclick="setLang('pt')">PT</button>
+    </div>
+    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" data-i18n="navCta">Book a call</button>
+  </div>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#therapy" onclick="toggleMenu()" data-i18n="navTherapy">Therapy</a>
+  <a href="#about" onclick="toggleMenu()" data-i18n="navAbout">About</a>
+  <a href="#pricing" onclick="toggleMenu()" data-i18n="navPricing">Prices</a>
+  <a href="#contact" onclick="toggleMenu()" data-i18n="navContact">Contact</a>
+  <div class="mobile-lang">
+    <button class="lang-btn active" onclick="setLang('en');toggleMenu()">EN</button>
+    <button class="lang-btn" onclick="setLang('de');toggleMenu()">DE</button>
+    <button class="lang-btn" onclick="setLang('pt');toggleMenu()">PT</button>
+  </div>
+</div>
+
+<!-- AVAILABILITY BAR -->
+<div class="avail-bar">
+  <div class="avail-left">
+    <div class="avail-dot"></div>
+    <span data-i18n="availText">Currently accepting new clients - online and Berlin in-person</span>
+  </div>
+  <button class="avail-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" data-i18n="availCta">Book a free intro call</button>
+</div>
+
+<!-- LANG HINT -->
+<div class="lang-hint" id="langHint">
+  <span>🌍</span>
+  <span>Voce prefere o portugues? <strong onclick="setLang('pt')">Ver em portugues</strong> &nbsp;·&nbsp; Auf Deutsch? <strong onclick="setLang('de')">Zu Deutsch wechseln</strong></span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="eyebrow" data-i18n="heroEyebrow">Psychologist (UFRJ, Brazil) · Berlin · Online worldwide</div>
+    <h1 class="hero-h1" data-i18n="heroH1">A space to allow yourself to feel,<br><em>be heard and understood</em></h1>
+    <p class="hero-sub" data-i18n="heroSub">Therapy and counselling in English, German, and Portuguese - for expats, LGBTQIA+ people, high abilities and anyone working through identity, relationships, or emotional complexity.</p>
+    <div class="hero-ctas">
+      <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" data-i18n="heroCta1">Write to me</button>
+      <button class="btn-outline" onclick="document.getElementById('therapy').scrollIntoView({behavior:'smooth'})" data-i18n="heroCta2">How therapy works</button>
+    </div>
+    <div class="hero-langs">
+      <span class="lang-pill">English</span>
+      <span class="lang-pill">Deutsch</span>
+      <span class="lang-pill">Portugues</span>
+    </div>
+  </div>
+  <div class="hero-img">
+    <!--
+      PHOTO INSTRUCTIONS:
+      1. Add your photo to the GitHub repo as: images/hero.jpg
+      2. Replace the div below with:
+      <img src="images/hero.jpg" alt="D Wiltshire Soares - Psychologist Berlin" style="width:100%;height:100%;object-fit:cover;object-position:top center;">
+    -->
+    <div class="hero-img-placeholder">
+      <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 2.5C15 2.5 7.5 8.8 7.5 16.5C7.5 20.9 10.9 24.5 15 24.5C19.1 24.5 22.5 20.9 22.5 16.5C22.5 8.8 15 2.5 15 2.5Z" stroke="#2b2f2c" stroke-width="1.2" fill="none"/>
+        <line x1="15" y1="24.5" x2="15" y2="9.5" stroke="#2b2f2c" stroke-width="1.1"/>
+        <line x1="15" y1="19" x2="11" y2="15" stroke="#2b2f2c" stroke-width="1.1"/>
+        <line x1="15" y1="19" x2="19" y2="15" stroke="#2b2f2c" stroke-width="1.1"/>
+        <line x1="15" y1="14" x2="12" y2="11" stroke="#2b2f2c" stroke-width="1.1"/>
+        <line x1="15" y1="14" x2="18" y2="11" stroke="#2b2f2c" stroke-width="1.1"/>
+      </svg>
+      <div class="photo-label">hero photo</div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item">
+    <div class="trust-icon">🎓</div>
+    <div>
+      <div class="trust-title" data-i18n="trust1Title">Heilpraktiker fur Psychotherapie</div>
+      <div class="trust-sub" data-i18n="trust1Sub">Licensed by Berlin Health Authority, 2023</div>
+    </div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon">🌱</div>
+    <div>
+      <div class="trust-title" data-i18n="trust2Title">15+ years of practice</div>
+      <div class="trust-sub" data-i18n="trust2Sub">UFRJ Rio de Janeiro · European School Berlin</div>
+    </div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon">🏅</div>
+    <div>
+      <div class="trust-title" data-i18n="trust3Title">fair@school award</div>
+      <div class="trust-sub" data-i18n="trust3Sub">German Federal Anti-Discrimination Agency, 2017</div>
+    </div>
+  </div>
+</div>
+
+<!-- ONLINE -->
+<div class="online-section">
+  <div class="online-left">
+    <div class="online-icon-box">🎥</div>
+    <div>
+      <div class="online-title" data-i18n="onlineTitle">Online sessions - wherever you are</div>
+      <div class="online-desc" data-i18n="onlineDesc">Secure video platform. Works for expats across Europe, Brazil, and beyond. No travel required.</div>
+    </div>
+  </div>
+  <div class="online-badges">
+    <span class="badge badge-green" data-i18n="badgeAvail">Available now</span>
+    <span class="badge" data-i18n="badgeSession">55 min · 85 EUR</span>
+    <span class="badge" data-i18n="badgeSliding">Sliding scale from 70 EUR</span>
+    <span class="badge" data-i18n="badgeSecure">Secure and encrypted</span>
+  </div>
+</div>
+
+<!-- THERAPY APPROACHES -->
+<section id="therapy" class="approaches">
+  <div class="eyebrow" data-i18n="therapyEyebrow">How I work</div>
+  <h2 class="section-title" data-i18n="therapyTitle">A multidimensional approach</h2>
+  <div class="approaches-grid">
+    <div class="approach-card">
+      <div class="approach-num">01</div>
+      <div class="approach-name" data-i18n="app1Name">Systemic therapy</div>
+      <div class="approach-desc" data-i18n="app1Desc">Exploring how your relationships, resources and values shape your emotional health. By understanding these patterns, you can choose if you want to shift them.</div>
+    </div>
+    <div class="approach-card">
+      <div class="approach-num">02</div>
+      <div class="approach-name" data-i18n="app2Name">Winnicottian psychoanalysis</div>
+      <div class="approach-desc" data-i18n="app2Desc">Working with early emotional experiences and pre-verbal development. Helping you reconnect with a more authentic sense of self by understanding where it was formed.</div>
+    </div>
+    <div class="approach-card">
+      <div class="approach-num">03</div>
+      <div class="approach-name" data-i18n="app3Name">Mindfulness · EFT · Schema</div>
+      <div class="approach-desc" data-i18n="app3Desc">Evidence-based tools for emotional regulation, grounding in the present moment, and identifying and changing deep-rooted patterns of thought and behaviour.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="about-img">
+    <!--
+      PHOTO INSTRUCTIONS:
+      1. Add your photo to the GitHub repo as: images/about.jpg
+      2. Replace the div below with:
+      <img src="images/about.jpg" alt="D Wiltshire Soares" style="width:100%;height:100%;object-fit:cover;">
+    -->
+    <div class="about-img-inner">
+      <svg width="52" viewBox="0 0 30 30" fill="none">
+        <path d="M15 2.5C15 2.5 7.5 8.8 7.5 16.5C7.5 20.9 10.9 24.5 15 24.5C19.1 24.5 22.5 20.9 22.5 16.5C22.5 8.8 15 2.5 15 2.5Z" stroke="#2b2f2c" stroke-width="1.2" fill="none"/>
+        <line x1="15" y1="24.5" x2="15" y2="9.5" stroke="#2b2f2c" stroke-width="1.1"/>
+        <line x1="15" y1="19" x2="11" y2="15" stroke="#2b2f2c" stroke-width="1.1"/>
+        <line x1="15" y1="19" x2="19" y2="15" stroke="#2b2f2c" stroke-width="1.1"/>
+        <line x1="15" y1="14" x2="12" y2="11" stroke="#2b2f2c" stroke-width="1.1"/>
+        <line x1="15" y1="14" x2="18" y2="11" stroke="#2b2f2c" stroke-width="1.1"/>
+      </svg>
+      <div class="photo-label">about photo</div>
+    </div>
+  </div>
+  <div class="about-text">
+    <div class="eyebrow" data-i18n="aboutEyebrow">About me</div>
+    <h2 class="section-title" data-i18n="aboutTitle">Brazilian psychologist, in Berlin since 2010</h2>
+    <p class="about-body" data-i18n="aboutBody">I graduated from the Federal University of Rio de Janeiro (UFRJ) in 2007. I worked with teenagers and families at the European School in Berlin for over 10 years and currently specialise in Systemic Therapy at the Systemisches Institut fur Achtsamkeit (SIA).</p>
+    <p class="about-detail" data-i18n="aboutDetail">My practice brings together psychoanalytic depth, relational focus, and grounding techniques - with a committed decolonial approach. My work in arts, music, and performance has given me a distinctive sensitivity and listening ability.</p>
+    <div class="credentials">
+      <div class="credential"><div class="cred-dot"></div><span data-i18n="cred1">Heilpraktiker fur Psychotherapie - Berlin Gesundheitsamt, 2023</span></div>
+      <div class="credential"><div class="cred-dot"></div><span data-i18n="cred2">Specialisation in Systemic Therapy - SIA Berlin (ongoing, end predicted Oct 2026)</span></div>
+      <div class="credential"><div class="cred-dot"></div><span data-i18n="cred3">Member of Verband freier Psychotherapeuten (VFP)</span></div>
+      <div class="credential"><div class="cred-dot"></div><span data-i18n="cred4">Speaker on LGBTQIA+ identities in education</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WELCOME -->
+<section class="welcome-section">
+  <div class="eyebrow" data-i18n="welcomeEyebrow">Particularly welcome</div>
+  <div class="welcome-grid">
+    <div class="welcome-card"><div class="welcome-icon">🏳️‍🌈</div><div class="welcome-label" data-i18n="w1">LGBTQIA+ people</div></div>
+    <div class="welcome-card"><div class="welcome-icon">✈️</div><div class="welcome-label" data-i18n="w2">Expats and internationals</div></div>
+    <div class="welcome-card"><div class="welcome-icon">✊</div><div class="welcome-label" data-i18n="w3">People with experiences of discrimination or racism</div></div>
+    <div class="welcome-card"><div class="welcome-icon">🧠</div><div class="welcome-label" data-i18n="w4">Neurodivergent people</div></div>
+    <div class="welcome-card"><div class="welcome-icon">🌱</div><div class="welcome-label" data-i18n="w5">Teenagers from age 14</div></div>
+    <div class="welcome-card"><div class="welcome-icon">🌍</div><div class="welcome-label" data-i18n="w6">Portuguese, English and German speakers worldwide</div></div>
+  </div>
+  <div class="decolonial-note" data-i18n="decolonialNote">My practice is committed to a decolonial approach - recognising how colonial legacies, structural inequalities, and cultural context shape the idea and practice of mental health and therapeutic relationships.</div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="pricing">
+  <div class="eyebrow" data-i18n="pricingEyebrow">Private practice</div>
+  <h2 class="section-title" style="margin-top:8px" data-i18n="pricingTitle">Transparent pricing</h2>
+  <div class="pricing-grid">
+    <div class="price-card">
+      <div class="price-type" data-i18n="p1Type">Individual session</div>
+      <div class="price-amount">85 EUR</div>
+      <div class="price-duration" data-i18n="p1Dur">55 minutes</div>
+      <div class="price-desc" data-i18n="p1Desc">In-person in Berlin or online via secure video. The first session is an opportunity to explore whether we're a good fit - there's no obligation to continue.</div>
+      <div class="sliding-pill" data-i18n="sliding1">Sliding scale available from 70 EUR</div>
+    </div>
+    <div class="price-card">
+      <div class="price-type" data-i18n="p2Type">Couples / family</div>
+      <div class="price-amount">130 EUR</div>
+      <div class="price-duration" data-i18n="p2Dur">90 minutes</div>
+      <div class="price-desc" data-i18n="p2Desc">For two or more people. A systemic and relational focus - exploring how patterns and dynamics between people can be understood and changed. Online or in-person.</div>
+      <div class="sliding-pill" data-i18n="sliding2">Sliding scale available</div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="social-proof">
+  <div class="eyebrow" data-i18n="proofEyebrow">Experiences</div>
+  <h2 class="section-title" style="margin-top:8px" data-i18n="proofTitle">What people say</h2>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text" data-i18n="r1">"Working with DW helped me understand things about myself I'd been carrying for years without being able to name them."</div>
+      <div class="review-author" data-i18n="r1a">- Client, online session</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text" data-i18n="r2">"As an expat in Berlin, finding a therapist who understands both cultures and works in my language was transformative."</div>
+      <div class="review-author" data-i18n="r2a">- Expat client, Berlin</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text" data-i18n="r3">"The space felt genuinely safe. No judgment, real curiosity, and a decolonial lens that actually meant something."</div>
+      <div class="review-author" data-i18n="r3a">- Client, online session</div>
+    </div>
+  </div>
+  <div class="press-bar">
+    <span class="press-label" data-i18n="pressLabel">As featured in</span>
+    <div class="press-links">
+      <a href="https://www.dw.com/pt-br/projeto-coordenado-por-brasileiro-ganha-pr%C3%AAmio-na-alemanha/a-39239467" target="_blank" rel="noopener" class="press-link">Deutsche Welle</a>
+      <a href="https://taz.de/Die-Verstaendnisfrage/!5938626/" target="_blank" rel="noopener" class="press-link">TAZ - Die Verstandnisfrage</a>
+      <a href="#" class="press-link">PodNagringa Podcast</a>
+      <a href="#" class="press-link">Psicast Vibe Podcast</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="contact-intro">
+    <div class="eyebrow" data-i18n="contactEyebrow">Get in touch</div>
+    <h2 class="section-title" data-i18n="contactTitle">Not sure where to start?</h2>
+    <p class="contact-body" data-i18n="contactBody">A first session is a chance to ask questions, share what you're looking for, and see whether working together feels right - with no commitment.</p>
+    <p class="contact-detail" data-i18n="contactDetail">Sessions are available in English, German, and Portuguese. Online worldwide or in-person in Berlin.</p>
+  </div>
+  <form onsubmit="handleSubmit(event)">
+    <div class="form-row">
+      <label>
+        <span data-i18n="formName">Name</span>
+        <input type="text" required>
+      </label>
+      <label>
+        <span data-i18n="formEmail">Email</span>
+        <input type="email" required>
+      </label>
+    </div>
+    <label>
+      <span data-i18n="formLang">Preferred language</span>
+      <select>
+        <option value="" data-i18n="formLangSelect">Select a language</option>
+        <option value="en">English</option>
+        <option value="de">Deutsch</option>
+        <option value="pt">Portugues</option>
+      </select>
+    </label>
+    <label>
+      <span data-i18n="formMessage">What brings you here?</span>
+      <textarea></textarea>
+    </label>
+    <p class="form-note" data-i18n="formNote">Your message is private. I'll reply within 2 business days.</p>
+    <button type="submit" class="form-submit" data-i18n="formSubmit">Send message</button>
+  </form>
+</section>
+
+<!-- FOOTER CTA -->
+<div class="footer-cta">
+  <div>
+    <div class="footer-cta-title" data-i18n="footerCtaTitle">Ready when you are.</div>
+    <div class="footer-cta-sub" data-i18n="footerCtaSub">Free intro call · No commitment · Online or Berlin in-person</div>
+  </div>
+  <button class="btn-sand" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" data-i18n="footerCtaBtn">Book a call</button>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="#" data-i18n="footerImprint">Impressum</a>
+    <a href="#" data-i18n="footerPrivacy">Datenschutzerklarung</a>
+    <a href="mailto:contact@dwsoares.com">contact@dwsoares.com</a>
+  </div>
+  <div class="footer-copy">© 2025 D Wiltshire Soares</div>
+</footer>
+
+<script>
+const i18n = {
+  en: {
+    logoName:"D Wiltshire Soares", logoSub:"Systemic Therapy",
+    navTherapy:"Therapy and counselling", navAbout:"About", navPricing:"Prices", navContact:"Contact", navCta:"Book a call",
+    availText:"Currently accepting new clients - online and Berlin in-person", availCta:"Book a free intro call",
+    heroEyebrow:"Psychologist (UFRJ, Brazil) · Berlin · Online worldwide",
+    heroH1:"A space to allow yourself to feel,<br><em>be heard and understood</em>",
+    heroSub:"Therapy and counselling in English, German, and Portuguese - for expats, LGBTQIA+ people, high abilities and anyone working through identity, relationships, or emotional complexity.",
+    heroCta1:"Write to me", heroCta2:"How therapy works",
+    trust1Title:"Heilpraktiker fur Psychotherapie", trust1Sub:"Licensed by Berlin Health Authority, 2023",
+    trust2Title:"15+ years of practice", trust2Sub:"UFRJ Rio de Janeiro · European School Berlin",
+    trust3Title:"fair@school award", trust3Sub:"German Federal Anti-Discrimination Agency, 2017",
+    onlineTitle:"Online sessions - wherever you are",
+    onlineDesc:"Secure video platform. Works for expats across Europe, Brazil, and beyond. No travel required.",
+    badgeAvail:"Available now", badgeSession:"55 min · 85 EUR", badgeSliding:"Sliding scale from 70 EUR", badgeSecure:"Secure and encrypted",
+    therapyEyebrow:"How I work", therapyTitle:"A multidimensional approach",
+    app1Name:"Systemic therapy", app1Desc:"Exploring how your relationships, resources and values shape your emotional health. By understanding these patterns, you can choose if you want to shift them.",
+    app2Name:"Winnicottian psychoanalysis", app2Desc:"Working with early emotional experiences and pre-verbal development. Helping you reconnect with a more authentic sense of self by understanding where it was formed.",
+    app3Name:"Mindfulness · EFT · Schema", app3Desc:"Evidence-based tools for emotional regulation, grounding in the present moment, and identifying and changing deep-rooted patterns of thought and behaviour.",
+    aboutEyebrow:"About me", aboutTitle:"Brazilian psychologist, in Berlin since 2010",
+    aboutBody:"I graduated from the Federal University of Rio de Janeiro (UFRJ) in 2007. I worked with teenagers and families at the European School in Berlin for over 10 years and currently specialise in Systemic Therapy at the Systemisches Institut fur Achtsamkeit (SIA).",
+    aboutDetail:"My practice brings together psychoanalytic depth, relational focus, and grounding techniques - with a committed decolonial approach. My work in arts, music, and performance has given me a distinctive sensitivity and listening ability.",
+    cred1:"Heilpraktiker fur Psychotherapie - Berlin Gesundheitsamt, 2023",
+    cred2:"Specialisation in Systemic Therapy - SIA Berlin (ongoing, end predicted Oct 2026)",
+    cred3:"Member of Verband freier Psychotherapeuten (VFP)",
+    cred4:"Speaker on LGBTQIA+ identities in education",
+    welcomeEyebrow:"Particularly welcome",
+    w1:"LGBTQIA+ people", w2:"Expats and internationals", w3:"People with experiences of discrimination or racism", w4:"Neurodivergent people", w5:"Teenagers from age 14", w6:"Portuguese, English and German speakers worldwide",
+    decolonialNote:"My practice is committed to a decolonial approach - recognising how colonial legacies, structural inequalities, and cultural context shape the idea and practice of mental health and therapeutic relationships.",
+    pricingEyebrow:"Private practice", pricingTitle:"Transparent pricing",
+    p1Type:"Individual session", p1Dur:"55 minutes",
+    p1Desc:"In-person in Berlin or online via secure video. The first session is an opportunity to explore whether we're a good fit - there's no obligation to continue.",
+    p2Type:"Couples / family", p2Dur:"90 minutes",
+    p2Desc:"For two or more people. A systemic and relational focus - exploring how patterns and dynamics between people can be understood and changed. Online or in-person.",
+    sliding1:"Sliding scale available from 70 EUR", sliding2:"Sliding scale available",
+    proofEyebrow:"Experiences", proofTitle:"What people say",
+    r1:'"Working with DW helped me understand things about myself I\'d been carrying for years without being able to name them."', r1a:"- Client, online session",
+    r2:'"As an expat in Berlin, finding a therapist who understands both cultures and works in my language was transformative."', r2a:"- Expat client, Berlin",
+    r3:'"The space felt genuinely safe. No judgment, real curiosity, and a decolonial lens that actually meant something."', r3a:"- Client, online session",
+    pressLabel:"As featured in",
+    contactEyebrow:"Get in touch", contactTitle:"Not sure where to start?",
+    contactBody:"A first session is a chance to ask questions, share what you're looking for, and see whether working together feels right - with no commitment.",
+    contactDetail:"Sessions are available in English, German, and Portuguese. Online worldwide or in-person in Berlin.",
+    formName:"Name", formEmail:"Email", formLang:"Preferred language", formLangSelect:"Select a language",
+    formMessage:"What brings you here?",
+    formNote:"Your message is private. I'll reply within 2 business days.", formSubmit:"Send message",
+    footerCtaTitle:"Ready when you are.", footerCtaSub:"Free intro call · No commitment · Online or Berlin in-person", footerCtaBtn:"Book a call",
+    footerImprint:"Impressum", footerPrivacy:"Datenschutzerklarung"
+  },
+  de: {
+    logoName:"D Wiltshire Soares", logoSub:"Systemische Therapie",
+    navTherapy:"Therapie", navAbout:"Uber mich", navPricing:"Preise", navContact:"Kontakt", navCta:"Termin buchen",
+    availText:"Aktuell nehme ich neue Klientinnen und Klienten an - online und vor Ort in Berlin", availCta:"Kostenloses Erstgesprach",
+    heroEyebrow:"Psychologe (UFRJ, Brasilien) · Berlin · Online weltweit",
+    heroH1:"Ein Raum, um sich zu erlauben zu fuhlen,<br><em>gehort und verstanden zu werden</em>",
+    heroSub:"Therapie und Beratung auf Englisch, Deutsch und Portugiesisch - fur Expats, LGBTQIA+ Menschen, Hochbegabte und alle, die an Identitat, Beziehungen oder emotionaler Komplexitat arbeiten mochten.",
+    heroCta1:"Schreib mir", heroCta2:"Wie Therapie funktioniert",
+    trust1Title:"Heilpraktiker fur Psychotherapie", trust1Sub:"Zugelassen vom Berliner Gesundheitsamt, 2023",
+    trust2Title:"15+ Jahre Erfahrung", trust2Sub:"UFRJ Rio de Janeiro · Europaische Schule Berlin",
+    trust3Title:"fair@school Auszeichnung", trust3Sub:"Antidiskriminierungsstelle des Bundes, 2017",
+    onlineTitle:"Online-Sitzungen - wo auch immer Sie sind",
+    onlineDesc:"Sichere Video-Plattform. Fur Expats in Europa, Brasilien und weltweit. Kein Anfahrtsweg notig.",
+    badgeAvail:"Platze verfugbar", badgeSession:"55 Min · 85 EUR", badgeSliding:"Gleitende Skala ab 70 EUR", badgeSecure:"Sicher und verschlusselt",
+    therapyEyebrow:"Meine Arbeitsweise", therapyTitle:"Ein vielschichtiger Ansatz",
+    app1Name:"Systemische Therapie", app1Desc:"Wir erkunden, wie Ihre Beziehungen, Ressourcen und Werte Ihre emotionale Gesundheit pragen. Wenn Sie diese Muster verstehen, konnen Sie wahlen, ob Sie sie verandern mochten.",
+    app2Name:"Winnicottianische Psychoanalyse", app2Desc:"Arbeit mit fruhen emotionalen Erfahrungen und praverbaler Entwicklung, um ein authentischeres Selbstgefuhl zuruckzugewinnen.",
+    app3Name:"Achtsamkeit · EFT · Schematherapie", app3Desc:"Evidenzbasierte Methoden zur emotionalen Regulation, Erdung im gegenwartigen Moment und Veranderung tief verwurzelter Muster.",
+    aboutEyebrow:"Uber mich", aboutTitle:"Brasilianischer Psychologe, in Berlin seit 2010",
+    aboutBody:"Ich habe 2007 an der Bundesuniversitat Rio de Janeiro (UFRJ) meinen Abschluss gemacht. Uber 10 Jahre lang habe ich mit Jugendlichen und Familien an der Europaischen Schule in Berlin gearbeitet und spezialisiere mich derzeit auf systemische Therapie am SIA Berlin.",
+    aboutDetail:"Meine Praxis verbindet psychoanalytische Tiefe, relationalen Fokus und Erdungstechniken - mit einem engagierten dekolonialen Ansatz. Meine Arbeit in Kunst, Musik und Performance hat mir eine besondere Sensibilitat und Zuhorfähigkeit gegeben.",
+    cred1:"Heilpraktiker fur Psychotherapie - Berliner Gesundheitsamt, 2023",
+    cred2:"Spezialisierung Systemische Therapie - SIA Berlin (laufend, voraussichtlich Ende Okt 2026)",
+    cred3:"Mitglied im Verband freier Psychotherapeuten (VFP)",
+    cred4:"Referent zu LGBTQIA+ Identitaten in der Bildung",
+    welcomeEyebrow:"Besonders willkommen",
+    w1:"LGBTQIA+ Menschen", w2:"Expats und Internationale", w3:"Menschen mit Diskriminierungs- oder Rassismuserfahrungen", w4:"Neurodivergente Menschen", w5:"Jugendliche ab 14 Jahren", w6:"Portugiesisch-, Englisch- und Deutschsprachige weltweit",
+    decolonialNote:"Meine Praxis verfolgt einen dekolonialen Ansatz - in dem Bewusstsein, wie koloniale Erbschaften, strukturelle Ungleichheiten und kultureller Kontext die Idee und Praxis psychischer Gesundheit pragen.",
+    pricingEyebrow:"Privatpraxis", pricingTitle:"Transparente Preise",
+    p1Type:"Einzelsitzung", p1Dur:"55 Minuten",
+    p1Desc:"In Berlin oder online per sicherem Video. Die erste Sitzung ist eine Moglichkeit zu erkunden, ob wir gut zusammenpassen - ohne Verpflichtung zur Fortsetzung.",
+    p2Type:"Paar / Familie", p2Dur:"90 Minuten",
+    p2Desc:"Fur zwei oder mehr Personen. Systemischer und relationaler Fokus - Erkundung von Mustern und Dynamiken. Online oder vor Ort.",
+    sliding1:"Gleitende Skala ab 70 EUR", sliding2:"Gleitende Skala moglich",
+    proofEyebrow:"Erfahrungen", proofTitle:"Was Menschen sagen",
+    r1:'"Die Arbeit mit DW hat mir geholfen, Dinge uber mich zu verstehen, die ich jahrelang mit mir getragen hatte."', r1a:"- Klientin, Online-Sitzung",
+    r2:'"Als Expat in Berlin war es transformativ, einen Therapeuten zu finden, der beide Kulturen versteht."', r2a:"- Expat-Klient, Berlin",
+    r3:'"Der Raum fuhlte sich wirklich sicher an. Kein Urteil, echte Neugier und ein dekolonialer Ansatz mit echter Bedeutung."', r3a:"- Klientin, Online-Sitzung",
+    pressLabel:"Veroffentlicht in",
+    contactEyebrow:"Kontakt", contactTitle:"Nicht sicher, wo anfangen?",
+    contactBody:"Eine erste Sitzung bietet die Moglichkeit, Fragen zu stellen und zu sehen, ob eine Zusammenarbeit passt - ganz ohne Verpflichtung.",
+    contactDetail:"Sitzungen auf Englisch, Deutsch und Portugiesisch. Online weltweit oder in Berlin.",
+    formName:"Name", formEmail:"E-Mail", formLang:"Bevorzugte Sprache", formLangSelect:"Sprache wahlen",
+    formMessage:"Was bringt Sie her?",
+    formNote:"Ihre Nachricht ist vertraulich. Ich antworte innerhalb von 2 Werktagen.", formSubmit:"Nachricht senden",
+    footerCtaTitle:"Bereit, wenn Sie es sind.", footerCtaSub:"Kostenloses Erstgesprach · Keine Verpflichtung · Online oder Berlin", footerCtaBtn:"Termin buchen",
+    footerImprint:"Impressum", footerPrivacy:"Datenschutzerklarung"
+  },
+  pt: {
+    logoName:"D Wiltshire Soares", logoSub:"Terapia Sistemica",
+    navTherapy:"Terapia e aconselhamento", navAbout:"Sobre mim", navPricing:"Precos", navContact:"Contato", navCta:"Agendar conversa",
+    availText:"Aceitando novos clientes agora - online e presencial em Berlim", availCta:"Conversa inicial gratuita",
+    heroEyebrow:"Psicologo (UFRJ, Brasil) · Berlim · Online em todo o mundo",
+    heroH1:"Um espaco para se permitir sentir,<br><em>ser ouvido e compreendido</em>",
+    heroSub:"Terapia e aconselhamento em portugues, ingles e alemao - para brasileiros no exterior, pessoas LGBTQIA+, altas habilidades e quem navega por identidade, relacoes ou complexidade emocional.",
+    heroCta1:"Escreva para mim", heroCta2:"Como funciona a terapia",
+    trust1Title:"Heilpraktiker fur Psychotherapie", trust1Sub:"Licenciado pela Autoridade de Saude de Berlim, 2023",
+    trust2Title:"15+ anos de pratica", trust2Sub:"UFRJ Rio de Janeiro · Escola Europeia de Berlim",
+    trust3Title:"Premio fair@school", trust3Sub:"Agencia Federal Antidiscriminacao da Alemanha, 2017",
+    onlineTitle:"Sessoes online - onde voce estiver",
+    onlineDesc:"Plataforma de video segura. Para brasileiros e falantes de portugues no mundo todo. Sem deslocamento.",
+    badgeAvail:"Disponivel agora", badgeSession:"55 min · 85 EUR", badgeSliding:"Escala movel a partir de 70 EUR", badgeSecure:"Seguro e criptografado",
+    therapyEyebrow:"Como trabalho", therapyTitle:"Uma abordagem multidimensional",
+    app1Name:"Terapia sistemica", app1Desc:"Explorando como seus relacionamentos, recursos e valores moldam sua saude emocional. Ao entender esses padroes, voce pode escolher se quer transforma-los.",
+    app2Name:"Psicanalise winnicottiana", app2Desc:"Trabalho com experiencias emocionais precoces e desenvolvimento pre-verbal para reconectar com um senso mais autentico de si mesmo.",
+    app3Name:"Mindfulness · TFE · Esquema", app3Desc:"Ferramentas baseadas em evidencias para regulacao emocional, ancoragem no presente e transformacao de padroes profundamente enraizados.",
+    aboutEyebrow:"Sobre mim", aboutTitle:"Psicologo brasileiro, em Berlim desde 2010",
+    aboutBody:"Formado pela Universidade Federal do Rio de Janeiro (UFRJ) em 2007. Trabalhei por mais de 10 anos com adolescentes e familias na Escola Europeia de Berlim e atualmente me especializo em Terapia Sistemica no SIA Berlin.",
+    aboutDetail:"Minha pratica une profundidade psicanalitica, foco relacional e tecnicas de ancoragem - com um comprometimento com a abordagem decolonial. A experiencia nas artes, musica e dramaturgia me deu uma sensibilidade e escuta unicas.",
+    cred1:"Heilpraktiker fur Psychotherapie - Autoridade de Saude de Berlim, 2023",
+    cred2:"Especializacao em Terapia Sistemica - SIA Berlin (em andamento, previsto para out 2026)",
+    cred3:"Membro do Verband freier Psychotherapeuten (VFP)",
+    cred4:"Palestrante sobre identidades LGBTQIA+ na educacao",
+    welcomeEyebrow:"Especialmente bem-vindos",
+    w1:"Pessoas LGBTQIA+", w2:"Brasileiros e estrangeiros no exterior", w3:"Pessoas com experiencias de discriminacao ou racismo", w4:"Pessoas neurodivergentes", w5:"Adolescentes a partir de 14 anos", w6:"Falantes de portugues, ingles e alemao no mundo todo",
+    decolonialNote:"Minha pratica tem um comprometimento com a abordagem decolonial - reconhecendo como herancas coloniais, desigualdades estruturais e contexto cultural moldam a ideia e a pratica da saude mental e das relacoes terapeuticas.",
+    pricingEyebrow:"Consultorio particular", pricingTitle:"Precos transparentes",
+    p1Type:"Sessao individual", p1Dur:"55 minutos",
+    p1Desc:"Presencial em Berlim ou online por video seguro. A primeira sessao e uma oportunidade de explorar se trabalhamos bem juntos - sem compromisso de continuidade.",
+    p2Type:"Casal / familia", p2Dur:"90 minutos",
+    p2Desc:"Para duas ou mais pessoas. Foco sistemico e relacional - explorando padroes e dinamicas entre pessoas. Online ou presencial.",
+    sliding1:"Escala movel disponivel a partir de 70 EUR", sliding2:"Escala movel disponivel",
+    proofEyebrow:"Experiencias", proofTitle:"O que as pessoas dizem",
+    r1:'"Trabalhar com DW me ajudou a entender coisas sobre mim mesmo que eu carregava ha anos sem conseguir nomear."', r1a:"- Cliente, sessao online",
+    r2:'"Como brasileira em Berlim, encontrar um terapeuta que entende as duas culturas e trabalha no meu idioma foi transformador."', r2a:"- Cliente, Berlim",
+    r3:'"O espaco era genuinamente seguro. Sem julgamentos, curiosidade real e uma abordagem decolonial que fazia sentido."', r3a:"- Cliente, sessao online",
+    pressLabel:"Publicado em",
+    contactEyebrow:"Fale comigo", contactTitle:"Nao sabe por onde comecar?",
+    contactBody:"Uma primeira sessao e uma chance de fazer perguntas, compartilhar o que voce busca e ver se trabalhar juntos faz sentido - sem compromisso.",
+    contactDetail:"Sessoes em portugues, ingles e alemao. Online em qualquer lugar ou presencial em Berlim.",
+    formName:"Nome", formEmail:"E-mail", formLang:"Idioma preferido", formLangSelect:"Escolha o idioma",
+    formMessage:"O que te traz aqui?",
+    formNote:"Sua mensagem e privada. Responderei em ate 2 dias uteis.", formSubmit:"Enviar mensagem",
+    footerCtaTitle:"Pronto quando voce estiver.", footerCtaSub:"Conversa gratuita · Sem compromisso · Online ou presencial em Berlim", footerCtaBtn:"Agendar conversa",
+    footerImprint:"Impressum", footerPrivacy:"Politica de privacidade"
+  }
+};
+
+let currentLang = 'en';
+
+function setLang(lang) {
+  currentLang = lang;
+  const t = i18n[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) el.innerHTML = t[key];
+  });
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+  });
+  document.documentElement.lang = lang;
+  const hint = document.getElementById('langHint');
+  if (hint) hint.style.display = 'none';
+}
+
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.form-submit');
+  btn.textContent = currentLang === 'pt' ? 'Enviado!' : currentLang === 'de' ? 'Gesendet!' : 'Sent!';
+  btn.style.opacity = '.6';
+  btn.disabled = true;
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const browserLang = navigator.language.slice(0, 2);
+  if (['de', 'pt'].includes(browserLang)) setLang(browserLang);
+});
+</script>
+</body>
+</html>
