@@ -27,8 +27,9 @@
     "@type": "Service",
     "name": "Psychotherapy and counselling",
     "areaServed": ["Berlin", "Online worldwide"],
-    "priceRange": "70-130 EUR"
-  }
+    "priceRange": "70–130 EUR"
+  },
+  "email": "info@dwsoares.com"
 }
 </script>
 <style>
@@ -400,11 +401,44 @@
     overflow: hidden;
     background: var(--sand);
     aspect-ratio: 4/5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
   }
-  .about-img-inner { display: flex; flex-direction: column; align-items: center; gap: 10px; opacity: .4; }
+  .about-carousel { width: 100%; height: 100%; position: relative; }
+  .about-carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.7s ease-in-out;
+  }
+  .about-carousel-slide {
+    min-width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+  }
+  .about-carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .about-carousel-dots {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 7px;
+    z-index: 2;
+  }
+  .about-carousel-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.45);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background .2s;
+  }
+  .about-carousel-dot.active { background: #fff; }
   .about-text { display: flex; flex-direction: column; gap: 18px; }
   .about-body { font-size: 15px; color: var(--char-mid); line-height: 1.75; }
   .about-detail { font-size: 13px; color: var(--char-light); line-height: 1.7; }
@@ -680,7 +714,7 @@
 <!-- LANG HINT -->
 <div class="lang-hint" id="langHint">
   <span>🌍</span>
-  <span>Voce prefere o portugues? <strong onclick="setLang('pt')">Ver em portugues</strong> &nbsp;·&nbsp; Auf Deutsch? <strong onclick="setLang('de')">Zu Deutsch wechseln</strong></span>
+  <span>Você prefere o português? <strong onclick="setLang('pt')">Ver em português</strong> &nbsp;·&nbsp; Auf Deutsch? <strong onclick="setLang('de')">Zu Deutsch wechseln</strong></span>
 </div>
 
 <!-- HERO -->
@@ -696,27 +730,11 @@
     <div class="hero-langs">
       <span class="lang-pill">English</span>
       <span class="lang-pill">Deutsch</span>
-      <span class="lang-pill">Portugues</span>
+      <span class="lang-pill">Português</span>
     </div>
   </div>
   <div class="hero-img">
-    <!--
-      PHOTO INSTRUCTIONS:
-      1. Add your photo to the GitHub repo as: images/hero.jpg
-      2. Replace the div below with:
-      <img src="images/hero.jpg" alt="D Wiltshire Soares - Psychologist Berlin" style="width:100%;height:100%;object-fit:cover;object-position:top center;">
-    -->
-    <div class="hero-img-placeholder">
-      <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M15 2.5C15 2.5 7.5 8.8 7.5 16.5C7.5 20.9 10.9 24.5 15 24.5C19.1 24.5 22.5 20.9 22.5 16.5C22.5 8.8 15 2.5 15 2.5Z" stroke="#2b2f2c" stroke-width="1.2" fill="none"/>
-        <line x1="15" y1="24.5" x2="15" y2="9.5" stroke="#2b2f2c" stroke-width="1.1"/>
-        <line x1="15" y1="19" x2="11" y2="15" stroke="#2b2f2c" stroke-width="1.1"/>
-        <line x1="15" y1="19" x2="19" y2="15" stroke="#2b2f2c" stroke-width="1.1"/>
-        <line x1="15" y1="14" x2="12" y2="11" stroke="#2b2f2c" stroke-width="1.1"/>
-        <line x1="15" y1="14" x2="18" y2="11" stroke="#2b2f2c" stroke-width="1.1"/>
-      </svg>
-      <div class="photo-label">hero photo</div>
-    </div>
+    <img src="img/hero.jpg" alt="D Wiltshire Soares — Psychologist Berlin" style="width:100%;height:100%;object-fit:cover;object-position:top center;">
   </div>
 </section>
 
@@ -725,7 +743,7 @@
   <div class="trust-item">
     <div class="trust-icon">🎓</div>
     <div>
-      <div class="trust-title" data-i18n="trust1Title">Heilpraktiker fur Psychotherapie</div>
+      <div class="trust-title" data-i18n="trust1Title">Heilpraktiker für Psychotherapie</div>
       <div class="trust-sub" data-i18n="trust1Sub">Licensed by Berlin Health Authority, 2023</div>
     </div>
   </div>
@@ -755,10 +773,9 @@
     </div>
   </div>
   <div class="online-badges">
-    <span class="badge badge-green" data-i18n="badgeAvail">Available now</span>
-    <span class="badge" data-i18n="badgeSession">55 min · 85 EUR</span>
-    <span class="badge" data-i18n="badgeSliding">Sliding scale from 70 EUR</span>
-    <span class="badge" data-i18n="badgeSecure">Secure and encrypted</span>
+    <span class="badge" data-i18n="badgeSession">55 min · 85€</span>
+    <span class="badge" data-i18n="badgeSliding">Sliding scale</span>
+    <span class="badge" data-i18n="badgeSecure">Secure &amp; encrypted</span>
   </div>
 </div>
 
@@ -788,32 +805,27 @@
 <!-- ABOUT -->
 <section id="about" class="about">
   <div class="about-img">
-    <!--
-      PHOTO INSTRUCTIONS:
-      1. Add your photo to the GitHub repo as: images/about.jpg
-      2. Replace the div below with:
-      <img src="images/about.jpg" alt="D Wiltshire Soares" style="width:100%;height:100%;object-fit:cover;">
-    -->
-    <div class="about-img-inner">
-      <svg width="52" viewBox="0 0 30 30" fill="none">
-        <path d="M15 2.5C15 2.5 7.5 8.8 7.5 16.5C7.5 20.9 10.9 24.5 15 24.5C19.1 24.5 22.5 20.9 22.5 16.5C22.5 8.8 15 2.5 15 2.5Z" stroke="#2b2f2c" stroke-width="1.2" fill="none"/>
-        <line x1="15" y1="24.5" x2="15" y2="9.5" stroke="#2b2f2c" stroke-width="1.1"/>
-        <line x1="15" y1="19" x2="11" y2="15" stroke="#2b2f2c" stroke-width="1.1"/>
-        <line x1="15" y1="19" x2="19" y2="15" stroke="#2b2f2c" stroke-width="1.1"/>
-        <line x1="15" y1="14" x2="12" y2="11" stroke="#2b2f2c" stroke-width="1.1"/>
-        <line x1="15" y1="14" x2="18" y2="11" stroke="#2b2f2c" stroke-width="1.1"/>
-      </svg>
-      <div class="photo-label">about photo</div>
+    <div class="about-carousel" id="aboutCarousel" aria-label="Photo gallery">
+      <div class="about-carousel-track">
+        <div class="about-carousel-slide"><img src="img/about-1.jpg" alt="D Wiltshire Soares"></div>
+        <div class="about-carousel-slide"><img src="img/about-2.jpg" alt="D Wiltshire Soares"></div>
+        <div class="about-carousel-slide"><img src="img/about-3.jpg" alt="D Wiltshire Soares"></div>
+      </div>
+      <div class="about-carousel-dots" role="tablist" aria-label="Slide navigation">
+        <button type="button" class="about-carousel-dot active" aria-label="Slide 1"></button>
+        <button type="button" class="about-carousel-dot" aria-label="Slide 2"></button>
+        <button type="button" class="about-carousel-dot" aria-label="Slide 3"></button>
+      </div>
     </div>
   </div>
   <div class="about-text">
     <div class="eyebrow" data-i18n="aboutEyebrow">About me</div>
-    <h2 class="section-title" data-i18n="aboutTitle">Brazilian psychologist, in Berlin since 2010</h2>
-    <p class="about-body" data-i18n="aboutBody">I graduated from the Federal University of Rio de Janeiro (UFRJ) in 2007. I worked with teenagers and families at the European School in Berlin for over 10 years and currently specialise in Systemic Therapy at the Systemisches Institut fur Achtsamkeit (SIA).</p>
-    <p class="about-detail" data-i18n="aboutDetail">My practice brings together psychoanalytic depth, relational focus, and grounding techniques - with a committed decolonial approach. My work in arts, music, and performance has given me a distinctive sensitivity and listening ability.</p>
+    <h2 class="section-title" data-i18n="aboutTitle">Brazilian psychologist,<br>In Berlin since 2010</h2>
+    <p class="about-body" data-i18n="aboutBody">I graduated from the Federal University of Rio de Janeiro (UFRJ) in 2007. I worked with teenagers and families at the European School in Berlin for over 10 years and currently specialise in Systemic Therapy at the Systemisches Institut für Achtsamkeit (SIA).</p>
+    <p class="about-detail" data-i18n="aboutDetail">My practice brings together psychoanalytic depth, relational focus, and grounding techniques — with a committed decolonial approach. My work in arts, music, and performance has given me a distinctive sensitivity and listening ability.</p>
     <div class="credentials">
-      <div class="credential"><div class="cred-dot"></div><span data-i18n="cred1">Heilpraktiker fur Psychotherapie - Berlin Gesundheitsamt, 2023</span></div>
-      <div class="credential"><div class="cred-dot"></div><span data-i18n="cred2">Specialisation in Systemic Therapy - SIA Berlin (ongoing, end predicted Oct 2026)</span></div>
+      <div class="credential"><div class="cred-dot"></div><span data-i18n="cred1">Heilpraktiker für Psychotherapie — Berlin Gesundheitsamt, 2023</span></div>
+      <div class="credential"><div class="cred-dot"></div><span data-i18n="cred2">Specialisation in Systemic Therapy — SIA Berlin (ongoing — end predicted Oct 2026)</span></div>
       <div class="credential"><div class="cred-dot"></div><span data-i18n="cred3">Member of Verband freier Psychotherapeuten (VFP)</span></div>
       <div class="credential"><div class="cred-dot"></div><span data-i18n="cred4">Speaker on LGBTQIA+ identities in education</span></div>
     </div>
@@ -841,14 +853,14 @@
   <div class="pricing-grid">
     <div class="price-card">
       <div class="price-type" data-i18n="p1Type">Individual session</div>
-      <div class="price-amount">85 EUR</div>
+      <div class="price-amount">85€</div>
       <div class="price-duration" data-i18n="p1Dur">55 minutes</div>
       <div class="price-desc" data-i18n="p1Desc">In-person in Berlin or online via secure video. The first session is an opportunity to explore whether we're a good fit - there's no obligation to continue.</div>
       <div class="sliding-pill" data-i18n="sliding1">Sliding scale available from 70 EUR</div>
     </div>
     <div class="price-card">
       <div class="price-type" data-i18n="p2Type">Couples / family</div>
-      <div class="price-amount">130 EUR</div>
+      <div class="price-amount">130€</div>
       <div class="price-duration" data-i18n="p2Dur">90 minutes</div>
       <div class="price-desc" data-i18n="p2Desc">For two or more people. A systemic and relational focus - exploring how patterns and dynamics between people can be understood and changed. Online or in-person.</div>
       <div class="sliding-pill" data-i18n="sliding2">Sliding scale available</div>
@@ -881,7 +893,7 @@
     <span class="press-label" data-i18n="pressLabel">As featured in</span>
     <div class="press-links">
       <a href="https://www.dw.com/pt-br/projeto-coordenado-por-brasileiro-ganha-pr%C3%AAmio-na-alemanha/a-39239467" target="_blank" rel="noopener" class="press-link">Deutsche Welle</a>
-      <a href="https://taz.de/Die-Verstaendnisfrage/!5938626/" target="_blank" rel="noopener" class="press-link">TAZ - Die Verstandnisfrage</a>
+      <a href="https://taz.de/Die-Verstaendnisfrage/!5938626/" target="_blank" rel="noopener" class="press-link">TAZ · Die Verständnisfrage</a>
       <a href="#" class="press-link">PodNagringa Podcast</a>
       <a href="#" class="press-link">Psicast Vibe Podcast</a>
     </div>
@@ -896,32 +908,35 @@
     <p class="contact-body" data-i18n="contactBody">A first session is a chance to ask questions, share what you're looking for, and see whether working together feels right - with no commitment.</p>
     <p class="contact-detail" data-i18n="contactDetail">Sessions are available in English, German, and Portuguese. Online worldwide or in-person in Berlin.</p>
   </div>
-  <form onsubmit="handleSubmit(event)">
+  <form id="contactForm" action="https://formsubmit.co/ajax/info@dwsoares.com" method="POST" onsubmit="handleSubmit(event)">
+    <input type="hidden" name="_subject" value="New message from dwsoares.com">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
     <div class="form-row">
       <label>
         <span data-i18n="formName">Name</span>
-        <input type="text" required>
+        <input type="text" name="name" required>
       </label>
       <label>
         <span data-i18n="formEmail">Email</span>
-        <input type="email" required>
+        <input type="email" name="email" required>
       </label>
     </div>
     <label>
       <span data-i18n="formLang">Preferred language</span>
-      <select>
+      <select name="language">
         <option value="" data-i18n="formLangSelect">Select a language</option>
         <option value="en">English</option>
         <option value="de">Deutsch</option>
-        <option value="pt">Portugues</option>
+        <option value="pt">Português</option>
       </select>
     </label>
     <label>
       <span data-i18n="formMessage">What brings you here?</span>
-      <textarea></textarea>
+      <textarea name="message" required></textarea>
     </label>
     <p class="form-note" data-i18n="formNote">Your message is private. I'll reply within 2 business days.</p>
-    <button type="submit" class="form-submit" data-i18n="formSubmit">Send message</button>
+    <button type="submit" class="form-submit" data-i18n="formSubmit">Send message →</button>
   </form>
 </section>
 
@@ -938,8 +953,8 @@
 <footer>
   <div class="footer-links">
     <a href="#" data-i18n="footerImprint">Impressum</a>
-    <a href="#" data-i18n="footerPrivacy">Datenschutzerklarung</a>
-    <a href="mailto:contact@dwsoares.com">contact@dwsoares.com</a>
+    <a href="#" data-i18n="footerPrivacy">Datenschutzerklärung</a>
+    <a href="mailto:info@dwsoares.com">info@dwsoares.com</a>
   </div>
   <div class="footer-copy">© 2025 D Wiltshire Soares</div>
 </footer>
@@ -949,146 +964,149 @@ const i18n = {
   en: {
     logoName:"D Wiltshire Soares", logoSub:"Systemic Therapy",
     navTherapy:"Therapy and counselling", navAbout:"About", navPricing:"Prices", navContact:"Contact", navCta:"Book a call",
-    availText:"Currently accepting new clients - online and Berlin in-person", availCta:"Book a free intro call",
+    availText:"Currently accepting new clients — online and Berlin in-person", availCta:"Book a free intro call",
     heroEyebrow:"Psychologist (UFRJ, Brazil) · Berlin · Online worldwide",
     heroH1:"A space to allow yourself to feel,<br><em>be heard and understood</em>",
-    heroSub:"Therapy and counselling in English, German, and Portuguese - for expats, LGBTQIA+ people, high abilities and anyone working through identity, relationships, or emotional complexity.",
+    heroSub:"Therapy and counselling in English, German, and Portuguese — for expats, LGBTQIA+ people, high abilities and anyone working through identity, relationships, or emotional complexity.",
     heroCta1:"Write to me", heroCta2:"How therapy works",
-    trust1Title:"Heilpraktiker fur Psychotherapie", trust1Sub:"Licensed by Berlin Health Authority, 2023",
+    trust1Title:"Heilpraktiker für Psychotherapie", trust1Sub:"Licensed by Berlin Health Authority, 2023",
     trust2Title:"15+ years of practice", trust2Sub:"UFRJ Rio de Janeiro · European School Berlin",
     trust3Title:"fair@school award", trust3Sub:"German Federal Anti-Discrimination Agency, 2017",
-    onlineTitle:"Online sessions - wherever you are",
+    onlineTitle:"Online sessions — wherever you are",
     onlineDesc:"Secure video platform. Works for expats across Europe, Brazil, and beyond. No travel required.",
-    badgeAvail:"Available now", badgeSession:"55 min · 85 EUR", badgeSliding:"Sliding scale from 70 EUR", badgeSecure:"Secure and encrypted",
+    badgeSession:"55 min · 85€", badgeSliding:"Sliding scale", badgeSecure:"Secure & encrypted",
     therapyEyebrow:"How I work", therapyTitle:"A multidimensional approach",
     app1Name:"Systemic therapy", app1Desc:"Exploring how your relationships, resources and values shape your emotional health. By understanding these patterns, you can choose if you want to shift them.",
     app2Name:"Winnicottian psychoanalysis", app2Desc:"Working with early emotional experiences and pre-verbal development. Helping you reconnect with a more authentic sense of self by understanding where it was formed.",
     app3Name:"Mindfulness · EFT · Schema", app3Desc:"Evidence-based tools for emotional regulation, grounding in the present moment, and identifying and changing deep-rooted patterns of thought and behaviour.",
-    aboutEyebrow:"About me", aboutTitle:"Brazilian psychologist, in Berlin since 2010",
-    aboutBody:"I graduated from the Federal University of Rio de Janeiro (UFRJ) in 2007. I worked with teenagers and families at the European School in Berlin for over 10 years and currently specialise in Systemic Therapy at the Systemisches Institut fur Achtsamkeit (SIA).",
-    aboutDetail:"My practice brings together psychoanalytic depth, relational focus, and grounding techniques - with a committed decolonial approach. My work in arts, music, and performance has given me a distinctive sensitivity and listening ability.",
-    cred1:"Heilpraktiker fur Psychotherapie - Berlin Gesundheitsamt, 2023",
-    cred2:"Specialisation in Systemic Therapy - SIA Berlin (ongoing, end predicted Oct 2026)",
+    aboutEyebrow:"About me", aboutTitle:"Brazilian psychologist,<br>In Berlin since 2010",
+    aboutBody:"I graduated from the Federal University of Rio de Janeiro (UFRJ) in 2007. I worked with teenagers and families at the European School in Berlin for over 10 years and currently specialise in Systemic Therapy at the Systemisches Institut für Achtsamkeit (SIA).",
+    aboutDetail:"My practice brings together psychoanalytic depth, relational focus, and grounding techniques — with a committed decolonial approach. My work in arts, music, and performance has given me a distinctive sensitivity and listening ability.",
+    cred1:"Heilpraktiker für Psychotherapie — Berlin Gesundheitsamt, 2023",
+    cred2:"Specialisation in Systemic Therapy — SIA Berlin (ongoing — end predicted Oct 2026)",
     cred3:"Member of Verband freier Psychotherapeuten (VFP)",
     cred4:"Speaker on LGBTQIA+ identities in education",
     welcomeEyebrow:"Particularly welcome",
-    w1:"LGBTQIA+ people", w2:"Expats and internationals", w3:"People with experiences of discrimination or racism", w4:"Neurodivergent people", w5:"Teenagers from age 14", w6:"Portuguese, English and German speakers worldwide",
-    decolonialNote:"My practice is committed to a decolonial approach - recognising how colonial legacies, structural inequalities, and cultural context shape the idea and practice of mental health and therapeutic relationships.",
+    w1:"LGBTQIA+ people", w2:"Expats & internationals", w3:"People with experiences of discrimination or racism", w4:"Neurodivergent people", w5:"Teenagers from age 14", w6:"Portuguese, English & German speakers worldwide",
+    decolonialNote:"My practice is committed to a decolonial approach — recognising how colonial legacies, structural inequalities, and cultural context shape the idea and practice of mental health and therapeutic relationships.",
     pricingEyebrow:"Private practice", pricingTitle:"Transparent pricing",
     p1Type:"Individual session", p1Dur:"55 minutes",
-    p1Desc:"In-person in Berlin or online via secure video. The first session is an opportunity to explore whether we're a good fit - there's no obligation to continue.",
+    p1Desc:"In-person in Berlin or online via secure video. The first session is an opportunity to explore whether we're a good fit — there's no obligation to continue.",
     p2Type:"Couples / family", p2Dur:"90 minutes",
-    p2Desc:"For two or more people. A systemic and relational focus - exploring how patterns and dynamics between people can be understood and changed. Online or in-person.",
-    sliding1:"Sliding scale available from 70 EUR", sliding2:"Sliding scale available",
+    p2Desc:"For two or more people. A systemic and relational focus — exploring how patterns and dynamics between people can be understood and changed. Online or in-person.",
+    sliding1:"Sliding scale available from 70€", sliding2:"Sliding scale available",
     proofEyebrow:"Experiences", proofTitle:"What people say",
-    r1:'"Working with DW helped me understand things about myself I\'d been carrying for years without being able to name them."', r1a:"- Client, online session",
-    r2:'"As an expat in Berlin, finding a therapist who understands both cultures and works in my language was transformative."', r2a:"- Expat client, Berlin",
-    r3:'"The space felt genuinely safe. No judgment, real curiosity, and a decolonial lens that actually meant something."', r3a:"- Client, online session",
+    r1:'"Working with DW helped me understand things about myself I\'d been carrying for years without being able to name them."', r1a:"— Client, online session",
+    r2:'"As an expat in Berlin, finding a therapist who understands both cultures and works in my language was transformative."', r2a:"— Expat client, Berlin",
+    r3:'"The space felt genuinely safe. No judgment, real curiosity, and a decolonial lens that actually meant something."', r3a:"— Client, online session",
     pressLabel:"As featured in",
-    contactEyebrow:"Get in touch", contactTitle:"Not sure where to start?",
-    contactBody:"A first session is a chance to ask questions, share what you're looking for, and see whether working together feels right - with no commitment.",
+    contactEyebrow:"Get in touch", contactTitle:"Not sure where<br>to start?",
+    contactBody:"A first session is a chance to ask questions, share what you're looking for, and see whether working together feels right — with no commitment.",
     contactDetail:"Sessions are available in English, German, and Portuguese. Online worldwide or in-person in Berlin.",
     formName:"Name", formEmail:"Email", formLang:"Preferred language", formLangSelect:"Select a language",
     formMessage:"What brings you here?",
-    formNote:"Your message is private. I'll reply within 2 business days.", formSubmit:"Send message",
+    formNote:"Your message is private. I'll reply within 2 business days.", formSubmit:"Send message →",
+    formSent:"Sent!", formError:"Error — please try again",
     footerCtaTitle:"Ready when you are.", footerCtaSub:"Free intro call · No commitment · Online or Berlin in-person", footerCtaBtn:"Book a call",
-    footerImprint:"Impressum", footerPrivacy:"Datenschutzerklarung"
+    footerImprint:"Impressum", footerPrivacy:"Datenschutzerklärung"
   },
   de: {
     logoName:"D Wiltshire Soares", logoSub:"Systemische Therapie",
-    navTherapy:"Therapie", navAbout:"Uber mich", navPricing:"Preise", navContact:"Kontakt", navCta:"Termin buchen",
-    availText:"Aktuell nehme ich neue Klientinnen und Klienten an - online und vor Ort in Berlin", availCta:"Kostenloses Erstgesprach",
+    navTherapy:"Therapie und Beratung", navAbout:"Über mich", navPricing:"Preise", navContact:"Kontakt", navCta:"Termin buchen",
+    availText:"Aktuell nehme ich neue Klientinnen und Klienten an — online und vor Ort in Berlin", availCta:"Kostenloses Erstgespräch",
     heroEyebrow:"Psychologe (UFRJ, Brasilien) · Berlin · Online weltweit",
-    heroH1:"Ein Raum, um sich zu erlauben zu fuhlen,<br><em>gehort und verstanden zu werden</em>",
-    heroSub:"Therapie und Beratung auf Englisch, Deutsch und Portugiesisch - fur Expats, LGBTQIA+ Menschen, Hochbegabte und alle, die an Identitat, Beziehungen oder emotionaler Komplexitat arbeiten mochten.",
-    heroCta1:"Schreib mir", heroCta2:"Wie Therapie funktioniert",
-    trust1Title:"Heilpraktiker fur Psychotherapie", trust1Sub:"Zugelassen vom Berliner Gesundheitsamt, 2023",
-    trust2Title:"15+ Jahre Erfahrung", trust2Sub:"UFRJ Rio de Janeiro · Europaische Schule Berlin",
+    heroH1:"Ein Raum, um sich zu erlauben zu fühlen,<br><em>gehört und verstanden zu werden</em>",
+    heroSub:"Therapie und Beratung auf Englisch, Deutsch und Portugiesisch — für Expats, LGBTQIA+ Menschen, Menschen mit hohen Fähigkeiten und alle, die an Identität, Beziehungen oder emotionaler Komplexität arbeiten möchten.",
+    heroCta1:"Schreiben Sie mir", heroCta2:"Wie Therapie funktioniert",
+    trust1Title:"Heilpraktiker für Psychotherapie", trust1Sub:"Zugelassen vom Berliner Gesundheitsamt, 2023",
+    trust2Title:"15+ Jahre Berufserfahrung", trust2Sub:"UFRJ Rio de Janeiro · Europäische Schule Berlin",
     trust3Title:"fair@school Auszeichnung", trust3Sub:"Antidiskriminierungsstelle des Bundes, 2017",
-    onlineTitle:"Online-Sitzungen - wo auch immer Sie sind",
-    onlineDesc:"Sichere Video-Plattform. Fur Expats in Europa, Brasilien und weltweit. Kein Anfahrtsweg notig.",
-    badgeAvail:"Platze verfugbar", badgeSession:"55 Min · 85 EUR", badgeSliding:"Gleitende Skala ab 70 EUR", badgeSecure:"Sicher und verschlusselt",
+    onlineTitle:"Online-Sitzungen — wo auch immer Sie sind",
+    onlineDesc:"Sichere Video-Plattform. Für Expats in Europa, Brasilien und weltweit. Kein Anfahrtsweg nötig.",
+    badgeSession:"55 Min · 85€", badgeSliding:"Gleitende Skala", badgeSecure:"Sicher und verschlüsselt",
     therapyEyebrow:"Meine Arbeitsweise", therapyTitle:"Ein vielschichtiger Ansatz",
-    app1Name:"Systemische Therapie", app1Desc:"Wir erkunden, wie Ihre Beziehungen, Ressourcen und Werte Ihre emotionale Gesundheit pragen. Wenn Sie diese Muster verstehen, konnen Sie wahlen, ob Sie sie verandern mochten.",
-    app2Name:"Winnicottianische Psychoanalyse", app2Desc:"Arbeit mit fruhen emotionalen Erfahrungen und praverbaler Entwicklung, um ein authentischeres Selbstgefuhl zuruckzugewinnen.",
-    app3Name:"Achtsamkeit · EFT · Schematherapie", app3Desc:"Evidenzbasierte Methoden zur emotionalen Regulation, Erdung im gegenwartigen Moment und Veranderung tief verwurzelter Muster.",
-    aboutEyebrow:"Uber mich", aboutTitle:"Brasilianischer Psychologe, in Berlin seit 2010",
-    aboutBody:"Ich habe 2007 an der Bundesuniversitat Rio de Janeiro (UFRJ) meinen Abschluss gemacht. Uber 10 Jahre lang habe ich mit Jugendlichen und Familien an der Europaischen Schule in Berlin gearbeitet und spezialisiere mich derzeit auf systemische Therapie am SIA Berlin.",
-    aboutDetail:"Meine Praxis verbindet psychoanalytische Tiefe, relationalen Fokus und Erdungstechniken - mit einem engagierten dekolonialen Ansatz. Meine Arbeit in Kunst, Musik und Performance hat mir eine besondere Sensibilitat und Zuhorfähigkeit gegeben.",
-    cred1:"Heilpraktiker fur Psychotherapie - Berliner Gesundheitsamt, 2023",
-    cred2:"Spezialisierung Systemische Therapie - SIA Berlin (laufend, voraussichtlich Ende Okt 2026)",
+    app1Name:"Systemische Therapie", app1Desc:"Wir erkunden, wie Ihre Beziehungen, Ressourcen und Werte Ihre emotionale Gesundheit prägen. Wenn Sie diese Muster verstehen, können Sie wählen, ob Sie sie verändern möchten.",
+    app2Name:"Winnicottianische Psychoanalyse", app2Desc:"Arbeit mit frühen emotionalen Erfahrungen und präverbaler Entwicklung — um ein authentischeres Selbstgefühl zurückzugewinnen, indem wir verstehen, wo es entstanden ist.",
+    app3Name:"Achtsamkeit · EFT · Schematherapie", app3Desc:"Evidenzbasierte Methoden zur emotionalen Regulation, Erdung im gegenwärtigen Moment und zur Veränderung tief verwurzelter Denk- und Verhaltensmuster.",
+    aboutEyebrow:"Über mich", aboutTitle:"Brasilianischer Psychologe,<br>In Berlin seit 2010",
+    aboutBody:"Ich habe 2007 an der Bundesuniversität Rio de Janeiro (UFRJ) meinen Abschluss gemacht. Über zehn Jahre lang habe ich mit Jugendlichen und Familien an der Europäischen Schule in Berlin gearbeitet und spezialisiere mich derzeit auf Systemische Therapie am Systemischen Institut für Achtsamkeit (SIA).",
+    aboutDetail:"Meine Praxis verbindet psychoanalytische Tiefe, relationalen Fokus und Erdungstechniken — mit einem engagierten dekolonialen Ansatz. Meine Arbeit in Kunst, Musik und Performance hat mir eine besondere Sensibilität und Zuhörfähigkeit gegeben.",
+    cred1:"Heilpraktiker für Psychotherapie — Berliner Gesundheitsamt, 2023",
+    cred2:"Spezialisierung Systemische Therapie — SIA Berlin (laufend — voraussichtlich Ende Okt. 2026)",
     cred3:"Mitglied im Verband freier Psychotherapeuten (VFP)",
-    cred4:"Referent zu LGBTQIA+ Identitaten in der Bildung",
+    cred4:"Referent zu LGBTQIA+ Identitäten in der Bildung",
     welcomeEyebrow:"Besonders willkommen",
-    w1:"LGBTQIA+ Menschen", w2:"Expats und Internationale", w3:"Menschen mit Diskriminierungs- oder Rassismuserfahrungen", w4:"Neurodivergente Menschen", w5:"Jugendliche ab 14 Jahren", w6:"Portugiesisch-, Englisch- und Deutschsprachige weltweit",
-    decolonialNote:"Meine Praxis verfolgt einen dekolonialen Ansatz - in dem Bewusstsein, wie koloniale Erbschaften, strukturelle Ungleichheiten und kultureller Kontext die Idee und Praxis psychischer Gesundheit pragen.",
+    w1:"LGBTQIA+ Menschen", w2:"Expats und internationale Klientinnen und Klienten", w3:"Menschen mit Erfahrungen von Diskriminierung oder Rassismus", w4:"Neurodivergente Menschen", w5:"Jugendliche ab 14 Jahren", w6:"Portugiesisch-, Englisch- und Deutschsprachige weltweit",
+    decolonialNote:"Meine Praxis verfolgt einen dekolonialen Ansatz — im Bewusstsein dafür, wie koloniale Erbschaften, strukturelle Ungleichheiten und kultureller Kontext die Idee und Praxis psychischer Gesundheit sowie therapeutische Beziehungen prägen.",
     pricingEyebrow:"Privatpraxis", pricingTitle:"Transparente Preise",
     p1Type:"Einzelsitzung", p1Dur:"55 Minuten",
-    p1Desc:"In Berlin oder online per sicherem Video. Die erste Sitzung ist eine Moglichkeit zu erkunden, ob wir gut zusammenpassen - ohne Verpflichtung zur Fortsetzung.",
-    p2Type:"Paar / Familie", p2Dur:"90 Minuten",
-    p2Desc:"Fur zwei oder mehr Personen. Systemischer und relationaler Fokus - Erkundung von Mustern und Dynamiken. Online oder vor Ort.",
-    sliding1:"Gleitende Skala ab 70 EUR", sliding2:"Gleitende Skala moglich",
+    p1Desc:"Vor Ort in Berlin oder online per sicherem Video. Die erste Sitzung ist eine Gelegenheit zu erkunden, ob wir gut zusammenpassen — ohne Verpflichtung zur Fortsetzung.",
+    p2Type:"Paar- / Familiensitzung", p2Dur:"90 Minuten",
+    p2Desc:"Für zwei oder mehr Personen. Systemischer und relationaler Fokus — Erkundung von Mustern und Dynamiken zwischen Menschen. Online oder vor Ort.",
+    sliding1:"Gleitende Skala ab 70€", sliding2:"Gleitende Skala möglich",
     proofEyebrow:"Erfahrungen", proofTitle:"Was Menschen sagen",
-    r1:'"Die Arbeit mit DW hat mir geholfen, Dinge uber mich zu verstehen, die ich jahrelang mit mir getragen hatte."', r1a:"- Klientin, Online-Sitzung",
-    r2:'"Als Expat in Berlin war es transformativ, einen Therapeuten zu finden, der beide Kulturen versteht."', r2a:"- Expat-Klient, Berlin",
-    r3:'"Der Raum fuhlte sich wirklich sicher an. Kein Urteil, echte Neugier und ein dekolonialer Ansatz mit echter Bedeutung."', r3a:"- Klientin, Online-Sitzung",
-    pressLabel:"Veroffentlicht in",
-    contactEyebrow:"Kontakt", contactTitle:"Nicht sicher, wo anfangen?",
-    contactBody:"Eine erste Sitzung bietet die Moglichkeit, Fragen zu stellen und zu sehen, ob eine Zusammenarbeit passt - ganz ohne Verpflichtung.",
-    contactDetail:"Sitzungen auf Englisch, Deutsch und Portugiesisch. Online weltweit oder in Berlin.",
-    formName:"Name", formEmail:"E-Mail", formLang:"Bevorzugte Sprache", formLangSelect:"Sprache wahlen",
-    formMessage:"Was bringt Sie her?",
-    formNote:"Ihre Nachricht ist vertraulich. Ich antworte innerhalb von 2 Werktagen.", formSubmit:"Nachricht senden",
-    footerCtaTitle:"Bereit, wenn Sie es sind.", footerCtaSub:"Kostenloses Erstgesprach · Keine Verpflichtung · Online oder Berlin", footerCtaBtn:"Termin buchen",
-    footerImprint:"Impressum", footerPrivacy:"Datenschutzerklarung"
+    r1:'"Die Arbeit mit DW hat mir geholfen, Dinge über mich zu verstehen, die ich jahrelang mit mir getragen hatte, ohne sie benennen zu können."', r1a:"— Klientin, Online-Sitzung",
+    r2:'"Als Expat in Berlin war es transformativ, eine Therapeutin zu finden, die beide Kulturen versteht und in meiner Sprache arbeitet."', r2a:"— Expat-Klientin, Berlin",
+    r3:'"Der Raum fühlte sich wirklich sicher an. Kein Urteil, echte Neugier und ein dekolonialer Blick, der wirklich etwas bedeutete."', r3a:"— Klientin, Online-Sitzung",
+    pressLabel:"Veröffentlicht in",
+    contactEyebrow:"Kontakt", contactTitle:"Nicht sicher,<br>wo Sie anfangen sollen?",
+    contactBody:"Eine erste Sitzung bietet die Möglichkeit, Fragen zu stellen, mitzuteilen, wonach Sie suchen, und zu sehen, ob eine Zusammenarbeit passt — ganz ohne Verpflichtung.",
+    contactDetail:"Sitzungen auf Englisch, Deutsch und Portugiesisch. Online weltweit oder vor Ort in Berlin.",
+    formName:"Name", formEmail:"E-Mail", formLang:"Bevorzugte Sprache", formLangSelect:"Sprache wählen",
+    formMessage:"Was bringt Sie zu mir?",
+    formNote:"Ihre Nachricht ist vertraulich. Ich antworte innerhalb von zwei Werktagen.", formSubmit:"Nachricht senden →",
+    formSent:"Gesendet!", formError:"Fehler — bitte erneut versuchen",
+    footerCtaTitle:"Bereit, wenn Sie es sind.", footerCtaSub:"Kostenloses Erstgespräch · Keine Verpflichtung · Online oder Berlin", footerCtaBtn:"Termin buchen",
+    footerImprint:"Impressum", footerPrivacy:"Datenschutzerklärung"
   },
   pt: {
-    logoName:"D Wiltshire Soares", logoSub:"Terapia Sistemica",
-    navTherapy:"Terapia e aconselhamento", navAbout:"Sobre mim", navPricing:"Precos", navContact:"Contato", navCta:"Agendar conversa",
-    availText:"Aceitando novos clientes agora - online e presencial em Berlim", availCta:"Conversa inicial gratuita",
-    heroEyebrow:"Psicologo (UFRJ, Brasil) · Berlim · Online em todo o mundo",
-    heroH1:"Um espaco para se permitir sentir,<br><em>ser ouvido e compreendido</em>",
-    heroSub:"Terapia e aconselhamento em portugues, ingles e alemao - para brasileiros no exterior, pessoas LGBTQIA+, altas habilidades e quem navega por identidade, relacoes ou complexidade emocional.",
+    logoName:"D Wiltshire Soares", logoSub:"Terapia Sistêmica",
+    navTherapy:"Terapia e aconselhamento", navAbout:"Sobre mim", navPricing:"Preços", navContact:"Contato", navCta:"Agendar conversa",
+    availText:"Aceitando novos clientes — online e presencial em Berlim", availCta:"Conversa inicial gratuita",
+    heroEyebrow:"Psicólogo (UFRJ, Brasil) · Berlim · Online em todo o mundo",
+    heroH1:"Um espaço para se permitir sentir,<br><em>ser ouvido e compreendido</em>",
+    heroSub:"Terapia e aconselhamento em português, inglês e alemão — para brasileiros no exterior, pessoas LGBTQIA+, altas habilidades e quem trabalha questões de identidade, relacionamentos ou complexidade emocional.",
     heroCta1:"Escreva para mim", heroCta2:"Como funciona a terapia",
-    trust1Title:"Heilpraktiker fur Psychotherapie", trust1Sub:"Licenciado pela Autoridade de Saude de Berlim, 2023",
-    trust2Title:"15+ anos de pratica", trust2Sub:"UFRJ Rio de Janeiro · Escola Europeia de Berlim",
-    trust3Title:"Premio fair@school", trust3Sub:"Agencia Federal Antidiscriminacao da Alemanha, 2017",
-    onlineTitle:"Sessoes online - onde voce estiver",
-    onlineDesc:"Plataforma de video segura. Para brasileiros e falantes de portugues no mundo todo. Sem deslocamento.",
-    badgeAvail:"Disponivel agora", badgeSession:"55 min · 85 EUR", badgeSliding:"Escala movel a partir de 70 EUR", badgeSecure:"Seguro e criptografado",
+    trust1Title:"Heilpraktiker für Psychotherapie", trust1Sub:"Licenciado pela Autoridade de Saúde de Berlim, 2023",
+    trust2Title:"15+ anos de prática", trust2Sub:"UFRJ Rio de Janeiro · Escola Europeia de Berlim",
+    trust3Title:"Prêmio fair@school", trust3Sub:"Agência Federal Antidiscriminação da Alemanha, 2017",
+    onlineTitle:"Sessões online — onde você estiver",
+    onlineDesc:"Plataforma de vídeo segura. Para brasileiros e falantes de português no mundo todo. Sem deslocamento.",
+    badgeSession:"55 min · 85€", badgeSliding:"Escala móvel", badgeSecure:"Seguro e criptografado",
     therapyEyebrow:"Como trabalho", therapyTitle:"Uma abordagem multidimensional",
-    app1Name:"Terapia sistemica", app1Desc:"Explorando como seus relacionamentos, recursos e valores moldam sua saude emocional. Ao entender esses padroes, voce pode escolher se quer transforma-los.",
-    app2Name:"Psicanalise winnicottiana", app2Desc:"Trabalho com experiencias emocionais precoces e desenvolvimento pre-verbal para reconectar com um senso mais autentico de si mesmo.",
-    app3Name:"Mindfulness · TFE · Esquema", app3Desc:"Ferramentas baseadas em evidencias para regulacao emocional, ancoragem no presente e transformacao de padroes profundamente enraizados.",
-    aboutEyebrow:"Sobre mim", aboutTitle:"Psicologo brasileiro, em Berlim desde 2010",
-    aboutBody:"Formado pela Universidade Federal do Rio de Janeiro (UFRJ) em 2007. Trabalhei por mais de 10 anos com adolescentes e familias na Escola Europeia de Berlim e atualmente me especializo em Terapia Sistemica no SIA Berlin.",
-    aboutDetail:"Minha pratica une profundidade psicanalitica, foco relacional e tecnicas de ancoragem - com um comprometimento com a abordagem decolonial. A experiencia nas artes, musica e dramaturgia me deu uma sensibilidade e escuta unicas.",
-    cred1:"Heilpraktiker fur Psychotherapie - Autoridade de Saude de Berlim, 2023",
-    cred2:"Especializacao em Terapia Sistemica - SIA Berlin (em andamento, previsto para out 2026)",
+    app1Name:"Terapia sistêmica", app1Desc:"Explorando como seus relacionamentos, recursos e valores moldam sua saúde emocional. Ao entender esses padrões, você pode escolher se quer transformá-los.",
+    app2Name:"Psicanálise winnicottiana", app2Desc:"Trabalho com experiências emocionais precoces e desenvolvimento pré-verbal — ajudando você a se reconectar com um senso mais autêntico de si mesmo, compreendendo onde ele se formou.",
+    app3Name:"Mindfulness · TFE · Esquemas", app3Desc:"Ferramentas baseadas em evidências para regulação emocional, ancoragem no presente e transformação de padrões profundamente enraizados de pensamento e comportamento.",
+    aboutEyebrow:"Sobre mim", aboutTitle:"Psicólogo brasileiro,<br>Em Berlim desde 2010",
+    aboutBody:"Formado pela Universidade Federal do Rio de Janeiro (UFRJ) em 2007. Trabalhei por mais de dez anos com adolescentes e famílias na Escola Europeia de Berlim e atualmente me especializo em Terapia Sistêmica no Systemisches Institut für Achtsamkeit (SIA).",
+    aboutDetail:"Minha prática une profundidade psicanalítica, foco relacional e técnicas de ancoragem — com um compromisso com a abordagem decolonial. Minha experiência nas artes, música e performance me deu uma sensibilidade e escuta únicas.",
+    cred1:"Heilpraktiker für Psychotherapie — Autoridade de Saúde de Berlim, 2023",
+    cred2:"Especialização em Terapia Sistêmica — SIA Berlin (em andamento — previsão de conclusão em out. 2026)",
     cred3:"Membro do Verband freier Psychotherapeuten (VFP)",
-    cred4:"Palestrante sobre identidades LGBTQIA+ na educacao",
+    cred4:"Palestrante sobre identidades LGBTQIA+ na educação",
     welcomeEyebrow:"Especialmente bem-vindos",
-    w1:"Pessoas LGBTQIA+", w2:"Brasileiros e estrangeiros no exterior", w3:"Pessoas com experiencias de discriminacao ou racismo", w4:"Pessoas neurodivergentes", w5:"Adolescentes a partir de 14 anos", w6:"Falantes de portugues, ingles e alemao no mundo todo",
-    decolonialNote:"Minha pratica tem um comprometimento com a abordagem decolonial - reconhecendo como herancas coloniais, desigualdades estruturais e contexto cultural moldam a ideia e a pratica da saude mental e das relacoes terapeuticas.",
-    pricingEyebrow:"Consultorio particular", pricingTitle:"Precos transparentes",
-    p1Type:"Sessao individual", p1Dur:"55 minutos",
-    p1Desc:"Presencial em Berlim ou online por video seguro. A primeira sessao e uma oportunidade de explorar se trabalhamos bem juntos - sem compromisso de continuidade.",
-    p2Type:"Casal / familia", p2Dur:"90 minutos",
-    p2Desc:"Para duas ou mais pessoas. Foco sistemico e relacional - explorando padroes e dinamicas entre pessoas. Online ou presencial.",
-    sliding1:"Escala movel disponivel a partir de 70 EUR", sliding2:"Escala movel disponivel",
-    proofEyebrow:"Experiencias", proofTitle:"O que as pessoas dizem",
-    r1:'"Trabalhar com DW me ajudou a entender coisas sobre mim mesmo que eu carregava ha anos sem conseguir nomear."', r1a:"- Cliente, sessao online",
-    r2:'"Como brasileira em Berlim, encontrar um terapeuta que entende as duas culturas e trabalha no meu idioma foi transformador."', r2a:"- Cliente, Berlim",
-    r3:'"O espaco era genuinamente seguro. Sem julgamentos, curiosidade real e uma abordagem decolonial que fazia sentido."', r3a:"- Cliente, sessao online",
+    w1:"Pessoas LGBTQIA+", w2:"Expatriados e internacionais", w3:"Pessoas com experiências de discriminação ou racismo", w4:"Pessoas neurodivergentes", w5:"Adolescentes a partir de 14 anos", w6:"Falantes de português, inglês e alemão no mundo todo",
+    decolonialNote:"Minha prática tem um compromisso com a abordagem decolonial — reconhecendo como heranças coloniais, desigualdades estruturais e contexto cultural moldam a ideia e a prática da saúde mental e das relações terapêuticas.",
+    pricingEyebrow:"Consultório particular", pricingTitle:"Preços transparentes",
+    p1Type:"Sessão individual", p1Dur:"55 minutos",
+    p1Desc:"Presencial em Berlim ou online por vídeo seguro. A primeira sessão é uma oportunidade de explorar se trabalhamos bem juntos — sem compromisso de continuidade.",
+    p2Type:"Casal / família", p2Dur:"90 minutos",
+    p2Desc:"Para duas ou mais pessoas. Foco sistêmico e relacional — explorando padrões e dinâmicas entre pessoas. Online ou presencial.",
+    sliding1:"Escala móvel disponível a partir de 70€", sliding2:"Escala móvel disponível",
+    proofEyebrow:"Experiências", proofTitle:"O que as pessoas dizem",
+    r1:'"Trabalhar com DW me ajudou a entender coisas sobre mim que eu carregava há anos sem conseguir nomear."', r1a:"— Cliente, sessão online",
+    r2:'"Como brasileira em Berlim, encontrar um terapeuta que entende as duas culturas e trabalha no meu idioma foi transformador."', r2a:"— Cliente, Berlim",
+    r3:'"O espaço era genuinamente seguro. Sem julgamentos, curiosidade real e uma abordagem decolonial que fazia sentido."', r3a:"— Cliente, sessão online",
     pressLabel:"Publicado em",
-    contactEyebrow:"Fale comigo", contactTitle:"Nao sabe por onde comecar?",
-    contactBody:"Uma primeira sessao e uma chance de fazer perguntas, compartilhar o que voce busca e ver se trabalhar juntos faz sentido - sem compromisso.",
-    contactDetail:"Sessoes em portugues, ingles e alemao. Online em qualquer lugar ou presencial em Berlim.",
+    contactEyebrow:"Fale comigo", contactTitle:"Não sabe<br>por onde começar?",
+    contactBody:"Uma primeira sessão é uma chance de fazer perguntas, compartilhar o que você busca e ver se trabalhar juntos faz sentido — sem compromisso.",
+    contactDetail:"Sessões em português, inglês e alemão. Online em qualquer lugar ou presencial em Berlim.",
     formName:"Nome", formEmail:"E-mail", formLang:"Idioma preferido", formLangSelect:"Escolha o idioma",
     formMessage:"O que te traz aqui?",
-    formNote:"Sua mensagem e privada. Responderei em ate 2 dias uteis.", formSubmit:"Enviar mensagem",
-    footerCtaTitle:"Pronto quando voce estiver.", footerCtaSub:"Conversa gratuita · Sem compromisso · Online ou presencial em Berlim", footerCtaBtn:"Agendar conversa",
-    footerImprint:"Impressum", footerPrivacy:"Politica de privacidade"
+    formNote:"Sua mensagem é privada. Responderei em até dois dias úteis.", formSubmit:"Enviar mensagem →",
+    formSent:"Enviado!", formError:"Erro — tente novamente",
+    footerCtaTitle:"Pronto quando você estiver.", footerCtaSub:"Conversa gratuita · Sem compromisso · Online ou presencial em Berlim", footerCtaBtn:"Agendar conversa",
+    footerImprint:"Impressum", footerPrivacy:"Política de privacidade"
   }
 };
 
@@ -1115,13 +1133,53 @@ function toggleMenu() {
 
 function handleSubmit(e) {
   e.preventDefault();
-  const btn = e.target.querySelector('.form-submit');
-  btn.textContent = currentLang === 'pt' ? 'Enviado!' : currentLang === 'de' ? 'Gesendet!' : 'Sent!';
-  btn.style.opacity = '.6';
+  const form = e.target;
+  const btn = form.querySelector('.form-submit');
+  const t = i18n[currentLang];
+  const origText = t.formSubmit;
   btn.disabled = true;
+  btn.style.opacity = '.6';
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  }).then(res => {
+    if (!res.ok) throw new Error();
+    btn.textContent = t.formSent;
+    form.reset();
+  }).catch(() => {
+    btn.textContent = t.formError;
+    btn.disabled = false;
+    btn.style.opacity = '1';
+    setTimeout(() => { btn.textContent = origText; }, 4000);
+  });
+}
+
+function initCarousel() {
+  const carousel = document.getElementById('aboutCarousel');
+  if (!carousel) return;
+  const track = carousel.querySelector('.about-carousel-track');
+  const slides = carousel.querySelectorAll('.about-carousel-slide');
+  const dots = carousel.querySelectorAll('.about-carousel-dot');
+  let current = 0;
+  let timer;
+
+  function goTo(index) {
+    current = (index + slides.length) % slides.length;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  function start() { timer = setInterval(() => goTo(current + 1), 5000); }
+  function reset() { clearInterval(timer); start(); }
+
+  dots.forEach((dot, i) => dot.addEventListener('click', () => { goTo(i); reset(); }));
+  goTo(0);
+  start();
 }
 
 window.addEventListener('DOMContentLoaded', () => {
+  initCarousel();
   const browserLang = navigator.language.slice(0, 2);
   if (['de', 'pt'].includes(browserLang)) setLang(browserLang);
 });
