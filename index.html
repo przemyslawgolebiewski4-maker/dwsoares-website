@@ -235,7 +235,7 @@
     background: var(--sand);
     position: relative;
     overflow: hidden;
-    aspect-ratio: 3/4;
+    aspect-ratio: 4/5;
   }
   .hero-img img {
     width: 100%;
@@ -418,6 +418,22 @@
   .credentials { display: flex; flex-direction: column; gap: 8px; padding-top: 4px; }
   .credential { display: flex; align-items: flex-start; gap: 10px; font-size: 12px; color: var(--char-light); line-height: 1.45; }
   .cred-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--sand); margin-top: 6px; flex-shrink: 0; }
+  .about-links { display: flex; flex-direction: column; gap: 8px; padding-top: 8px; border-top: 0.5px solid var(--sand-light); margin-top: 4px; }
+  .about-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: var(--char-mid);
+    padding: 8px 12px;
+    border: 0.5px solid var(--sand-light);
+    border-radius: var(--r);
+    background: var(--off-white);
+    transition: border-color .2s, color .2s;
+    text-decoration: none;
+  }
+  .about-link:hover { border-color: var(--sand); color: var(--char); }
+  .about-link-icon { font-size: 11px; color: var(--sand-dark); flex-shrink: 0; width: 16px; text-align: center; }
 
   /* WELCOME */
   .welcome-section {
@@ -709,7 +725,7 @@
   <div class="trust-item">
     <div class="trust-icon">🎓</div>
     <div>
-      <div class="trust-title" data-i18n="trust1Title">Heilpraktiker für Psychotherapie</div>
+      <div class="trust-title" data-i18n="trust1Title">Psychotherapie nach dem Heilpraktikergesetz</div>
       <div class="trust-sub" data-i18n="trust1Sub">Licensed by Berlin Health Authority, 2023</div>
     </div>
   </div>
@@ -717,7 +733,7 @@
     <div class="trust-icon">🌱</div>
     <div>
       <div class="trust-title" data-i18n="trust2Title">15+ years of practice</div>
-      <div class="trust-sub" data-i18n="trust2Sub">UFRJ Rio de Janeiro · European School Berlin</div>
+      <div class="trust-sub" data-i18n="trust2Sub">UFRJ Rio de Janeiro · European School Berlin · private Practice</div>
     </div>
   </div>
   <div class="trust-item">
@@ -776,32 +792,39 @@
         <div class="about-carousel-slide"><img src="img/about-1.jpg" alt="D Wiltshire Soares"></div>
         <div class="about-carousel-slide"><img src="img/about-2.jpg" alt="D Wiltshire Soares"></div>
         <div class="about-carousel-slide"><img src="img/about-3.jpg" alt="D Wiltshire Soares"></div>
-        <div class="about-carousel-slide"><img src="img/about-4.jpg" alt="D Wiltshire Soares"></div>
-        <div class="about-carousel-slide"><img src="img/about-5.jpg" alt="D Wiltshire Soares"></div>
-        <div class="about-carousel-slide"><img src="img/about-6.jpg" alt="D Wiltshire Soares"></div>
-        <div class="about-carousel-slide"><img src="img/about-7.jpg" alt="D Wiltshire Soares"></div>
-      </div>
       <div class="about-carousel-dots" role="tablist" aria-label="Slide navigation">
         <button type="button" class="about-carousel-dot active" aria-label="Slide 1"></button>
         <button type="button" class="about-carousel-dot" aria-label="Slide 2"></button>
         <button type="button" class="about-carousel-dot" aria-label="Slide 3"></button> 
-        <button type="button" class="about-carousel-dot" aria-label="Slide 4"></button>
-        <button type="button" class="about-carousel-dot" aria-label="Slide 5"></button>
-        <button type="button" class="about-carousel-dot" aria-label="Slide 6"></button>
-        <button type="button" class="about-carousel-dot" aria-label="Slide 7"></button>
       </div>
     </div>
   </div>
   <div class="about-text">
     <div class="eyebrow" data-i18n="aboutEyebrow">About me</div>
     <h2 class="section-title" data-i18n="aboutTitle">Brazilian psychologist,<br>In Berlin since 2010</h2>
-    <p class="about-body" data-i18n="aboutBody">I graduated from the Federal University of Rio de Janeiro (UFRJ) in 2007. I worked with teenagers and families at the European School in Berlin for over 10 years and currently specialise in Systemic Therapy at the Systemisches Institut für Achtsamkeit (SIA).</p>
-    <p class="about-detail" data-i18n="aboutDetail">My practice brings together psychoanalytic depth, relational focus, and grounding techniques — with a committed decolonial approach. My work in arts, music, and performance has given me a distinctive sensitivity and listening ability.</p>
+    <p class="about-body" data-i18n="aboutBody">I graduated from the Federal University of Rio de Janeiro (UFRJ) in 2007, where I also started my journey in Psychoanalysis. I worked with teenagers and families at the European School in Berlin as a Psychosocial Counsellor for over 10 years and currently specialise in Systemic Therapy at the Systemisches Institut für Achtsamkeit (SIA).</p>
+    <p class="about-detail" data-i18n="aboutDetail">My practice brings together psychoanalytic depth, relational focus and mindfulness — with a committed decolonial approach. My insertions in arts, music, and performance have also given me a distinctive sensitivity.</p>
     <div class="credentials">
-      <div class="credential"><div class="cred-dot"></div><span data-i18n="cred1">Heilpraktiker für Psychotherapie — Berlin Gesundheitsamt, 2023</span></div>
-      <div class="credential"><div class="cred-dot"></div><span data-i18n="cred2">Specialisation in Systemic Therapy — SIA Berlin (ongoing — end predicted Oct 2026)</span></div>
-      <div class="credential"><div class="cred-dot"></div><span data-i18n="cred3">Member of Verband freier Psychotherapeuten (VFP)</span></div>
-      <div class="credential"><div class="cred-dot"></div><span data-i18n="cred4">Speaker on LGBTQIA+ identities in education</span></div>
+      <div class="credential"><div class="cred-dot"></div><span data-i18n="cred1">Psychologist - UFRJ, Rio de Janeiro, Brazil 2007</span></div>
+      <div class="credential"><div class="cred-dot"></div><span data-i18n="cred2">Psychosocial Counsellor - Berlin, 2014-2024</span></div>
+      <div class="credential"><div class="cred-dot"></div><span data-i18n="cred3">Heilpraktiker für Psychotherapie — Berlin Gesundheitsamt, 2023</span></div>
+      <div class="credential"><div class="cred-dot"></div><span data-i18n="cred4">Specialisation in Systemic Therapy — SIA Berlin (ongoing - end predicted Oct 2026)</span></div>
+      <div class="credential"><div class="cred-dot"></div><span data-i18n="cred5">Member of Verband freier Psychotherapeuten (VFP)</span></div>
+      <div class="credential"><div class="cred-dot"></div><span data-i18n="cred6">Speaker on LGBTQIA+ identities in education</span></div>
+    </div>
+    <div class="about-links">
+      <a href="https://www.youtube.com/watch?v=OXZpMfzVSQA" target="_blank" rel="noopener" class="about-link">
+        <span class="about-link-icon">▶</span>
+        <span>Interview - PodNagringa Podcast</span>
+      </a>
+      <a href="https://www.youtube.com/watch?v=ZFkNJIEnH1E&t=2s" target="_blank" rel="noopener" class="about-link">
+        <span class="about-link-icon">▶</span>
+        <span>Interview - Psicast Vibe Podcast</span>
+      </a>
+      <a href="https://taz.de/Die-Verstaendnisfrage/!5938626/" target="_blank" rel="noopener" class="about-link">
+        <span class="about-link-icon">↗</span>
+        <span>TAZ - Die Verständnisfrage</span>
+      </a>
     </div>
   </div>
 </section>
@@ -887,7 +910,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-links">
-    <a href="#" data-i18n="footerImprint">Impressum</a>
+    <a href="#contact" data-i18n="footerImprint">Impressum</a>
     <a href="#" data-i18n="footerPrivacy">Datenschutzerklärung</a>
     <a href="mailto:info@dwsoares.com">info@dwsoares.com</a>
   </div>
@@ -915,12 +938,14 @@ const i18n = {
     app2Name:"Winnicottian psychoanalysis", app2Desc:"Working with early emotional experiences and pre-verbal development. Helping you reconnect with a more authentic sense of self by understanding where it was formed.",
     app3Name:"Mindfulness · EFT · Schema", app3Desc:"Evidence-based tools for emotional regulation, grounding in the present moment, and identifying and changing deep-rooted patterns of thought and behaviour.",
     aboutEyebrow:"About me", aboutTitle:"Brazilian psychologist,<br>In Berlin since 2010",
-    aboutBody:"I graduated from the Federal University of Rio de Janeiro (UFRJ) in 2007. I worked with teenagers and families at the European School in Berlin for over 10 years and currently specialise in Systemic Therapy at the Systemisches Institut für Achtsamkeit (SIA).",
-    aboutDetail:"My practice brings together psychoanalytic depth, relational focus, and grounding techniques — with a committed decolonial approach. My work in arts, music, and performance has given me a distinctive sensitivity and listening ability.",
-    cred1:"Heilpraktiker für Psychotherapie — Berlin Gesundheitsamt, 2023",
-    cred2:"Specialisation in Systemic Therapy — SIA Berlin (ongoing — end predicted Oct 2026)",
-    cred3:"Member of Verband freier Psychotherapeuten (VFP)",
-    cred4:"Speaker on LGBTQIA+ identities in education",
+    aboutBody:"I graduated from the Federal University of Rio de Janeiro (UFRJ) in 2007, where I also started my journey in Psychoanalysis. I worked with teenagers and families at the European School in Berlin as a Psychosocial Counsellor for over 10 years and currently specialise in Systemic Therapy at the Systemisches Institut für Achtsamkeit (SIA).",
+    aboutDetail:"My practice brings together psychoanalytic depth, relational focus and mindfulness — with a committed decolonial approach. My insertions in arts, music, and performance have also given me a distinctive sensitivity.",
+    cred1:"Psychologist - UFRJ, Rio de Janeiro, Brazil 2007",
+    cred2:"Psychosocial Counsellor - Berlin, 2014-2024",
+    cred3:"Heilpraktiker für Psychotherapie — Berlin Gesundheitsamt, 2023",
+    cred4:"Specialisation in Systemic Therapy — SIA Berlin (ongoing - end predicted Oct 2026)",
+    cred5:"Member of Verband freier Psychotherapeuten (VFP)",
+    cred6:"Speaker on LGBTQIA+ identities in education",
     welcomeEyebrow:"Particularly welcome",
     w1:"LGBTQIA+ people", w2:"Migrants & internationals", w3:"People with experiences of discrimination or racism", w4:"Neurodivergent people", w5:"Teenagers from age 14", w6:"Portuguese, English & German speakers worldwide",
     decolonialNote:"My practice is committed to a decolonial approach — recognising how colonial legacies, structural inequalities, and cultural context shape the idea and practice of mental health and therapeutic relationships.",
@@ -966,10 +991,12 @@ const i18n = {
     aboutEyebrow:"Über mich", aboutTitle:"Brasilianischer Psychologe,<br>In Berlin seit 2010",
     aboutBody:"Ich habe 2007 an der Bundesuniversität Rio de Janeiro (UFRJ) meinen Abschluss gemacht. Über zehn Jahre lang habe ich mit Jugendlichen und Familien an der Europäischen Schule in Berlin gearbeitet und spezialisiere mich derzeit auf Systemische Therapie am Systemischen Institut für Achtsamkeit (SIA).",
     aboutDetail:"Meine Praxis verbindet psychoanalytische Tiefe, relationalen Fokus und Erdungstechniken — mit einem engagierten dekolonialen Ansatz. Meine Arbeit in Kunst, Musik und Performance hat mir eine besondere Sensibilität und Zuhörfähigkeit gegeben.",
-    cred1:"Heilpraktiker für Psychotherapie — Berliner Gesundheitsamt, 2023",
-    cred2:"Spezialisierung Systemische Therapie — SIA Berlin (laufend — voraussichtlich Ende Okt. 2026)",
-    cred3:"Mitglied im Verband freier Psychotherapeuten (VFP)",
-    cred4:"Referent zu LGBTQIA+ Identitäten in der Bildung",
+    cred1:"Psychologe - UFRJ, Rio de Janeiro, Brasilien 2007",
+    cred2:"Psychosozialer Berater - Berlin, 2014-2024",
+    cred3:"Heilpraktiker für Psychotherapie — Berliner Gesundheitsamt, 2023",
+    cred4:"Spezialisierung Systemische Therapie — SIA Berlin (laufend — voraussichtlich Ende Okt. 2026)",
+    cred5:"Mitglied im Verband freier Psychotherapeuten (VFP)",
+    cred6:"Referent zu LGBTQIA+ Identitäten in der Bildung",
     welcomeEyebrow:"Besonders willkommen",
     w1:"LGBTQIA+ Menschen", w2:"Migrants und internationale Klientinnen und Klienten", w3:"Menschen mit Erfahrungen von Diskriminierung oder Rassismus", w4:"Neurodivergente Menschen", w5:"Jugendliche ab 14 Jahren", w6:"Portugiesisch-, Englisch- und Deutschsprachige weltweit",
     decolonialNote:"Meine Praxis verfolgt einen dekolonialen Ansatz — im Bewusstsein dafür, wie koloniale Erbschaften, strukturelle Ungleichheiten und kultureller Kontext die Idee und Praxis psychischer Gesundheit sowie therapeutische Beziehungen prägen.",
@@ -1013,12 +1040,14 @@ const i18n = {
     app2Name:"Psicanálise winnicottiana", app2Desc:"Trabalho com experiências emocionais precoces e desenvolvimento pré-verbal — ajudando você a se reconectar com um senso mais autêntico de si mesmo, compreendendo onde ele se formou.",
     app3Name:"Mindfulness · TFE · Esquemas", app3Desc:"Ferramentas baseadas em evidências para regulação emocional, ancoragem no presente e transformação de padrões profundamente enraizados de pensamento e comportamento.",
     aboutEyebrow:"Sobre mim", aboutTitle:"Psicólogo brasileiro,<br>Em Berlim desde 2010",
-    aboutBody:"Formado pela Universidade Federal do Rio de Janeiro (UFRJ) em 2007. Trabalhei por mais de dez anos com adolescentes e famílias na Escola Europeia de Berlim e atualmente me especializo em Terapia Sistêmica no Systemisches Institut für Achtsamkeit (SIA).",
-    aboutDetail:"Minha prática une profundidade psicanalítica, foco relacional e técnicas de ancoragem — com um compromisso com a abordagem decolonial. Minha experiência nas artes, música e performance me deu uma sensibilidade e escuta únicas.",
-    cred1:"Heilpraktiker für Psychotherapie — Autoridade de Saúde de Berlim, 2023",
-    cred2:"Especialização em Terapia Sistêmica — SIA Berlin (em andamento — previsão de conclusão em out. 2026)",
-    cred3:"Membro do Verband freier Psychotherapeuten (VFP)",
-    cred4:"Palestrante sobre identidades LGBTQIA+ na educação",
+    aboutBody:"Formado pela Universidade Federal do Rio de Janeiro (UFRJ) em 2007, onde também iniciei minha jornada na Psicanálise. Trabalhei por mais de dez anos com adolescentes e famílias na Escola Europeia de Berlim como Conselheiro Psicossocial e atualmente me especializo em Terapia Sistêmica no Systemisches Institut für Achtsamkeit (SIA).",
+    aboutDetail:"Minha prática une profundidade psicanalítica, foco relacional e mindfulness — com um compromisso com a abordagem decolonial. Minhas inserções nas artes, música e performance também me deram uma sensibilidade distintiva.",
+    cred1:"Psicólogo - UFRJ, Rio de Janeiro, Brasil 2007",
+    cred2:"Conselheiro Psicossocial - Berlim, 2014-2024",
+    cred3:"Heilpraktiker für Psychotherapie — Autoridade de Saúde de Berlim, 2023",
+    cred4:"Especialização em Terapia Sistêmica — SIA Berlin (em andamento - previsão out. 2026)",
+    cred5:"Membro do Verband freier Psychotherapeuten (VFP)",
+    cred6:"Palestrante sobre identidades LGBTQIA+ na educação",
     welcomeEyebrow:"Especialmente bem-vindos",
     w1:"Pessoas LGBTQIA+", w2:"Expatriados e internacionais", w3:"Pessoas com experiências de discriminação ou racismo", w4:"Pessoas neurodivergentes", w5:"Adolescentes a partir de 14 anos", w6:"Falantes de português, inglês e alemão no mundo todo",
     decolonialNote:"Minha prática tem um compromisso com a abordagem decolonial — reconhecendo como heranças coloniais, desigualdades estruturais e contexto cultural moldam a ideia e a prática da saúde mental e das relações terapêuticas.",
