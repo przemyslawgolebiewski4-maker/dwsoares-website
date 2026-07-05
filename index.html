@@ -237,12 +237,13 @@
     overflow: hidden;
     display: flex;
     align-items: stretch;
+    min-height: 420px;
   }
   .hero-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top center;
+    object-position: center top;
     display: block;
   }
   /* Replace this div with an <img> tag when photo is ready */
@@ -376,6 +377,8 @@
     background: var(--sand);
     position: relative;
     align-self: stretch;
+    aspect-ratio: 4 / 3;
+    min-height: 320px;
   }
   .about-carousel { width: 100%; height: 100%; position: relative; }
   .about-carousel-track {
@@ -392,6 +395,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
   }
   .about-carousel-dots {
     position: absolute;
@@ -705,7 +709,7 @@
     </div>
   </div>
   <div class="hero-img">
-    <img src="img/hero.jpg" alt="D Wiltshire Soares - Psychologist Berlin">
+    <img src="img/hero.jpg" alt="D Wiltshire Soares - Psychologist Berlin" width="1200" height="1600" fetchpriority="high" decoding="async">
   </div>
 </section>
 
@@ -778,22 +782,14 @@
   <div class="about-img">
     <div class="about-carousel" id="aboutCarousel" aria-label="Photo gallery">
       <div class="about-carousel-track">
-        <div class="about-carousel-slide"><img src="img/about-1.jpg" alt="D Wiltshire Soares"></div>
-        <div class="about-carousel-slide"><img src="img/about-2.jpg" alt="D Wiltshire Soares"></div>
-        <div class="about-carousel-slide"><img src="img/about-3.jpg" alt="D Wiltshire Soares"></div>
-        <div class="about-carousel-slide"><img src="img/about-4.jpg" alt="D Wiltshire Soares"></div>
-        <div class="about-carousel-slide"><img src="img/about-5.jpg" alt="D Wiltshire Soares"></div>
-        <div class="about-carousel-slide"><img src="img/about-6.jpg" alt="D Wiltshire Soares"></div>
-        <div class="about-carousel-slide"><img src="img/about-7.jpg" alt="D Wiltshire Soares"></div>
+        <div class="about-carousel-slide"><img src="img/about-1.jpg" alt="Practice building in Berlin" width="1440" height="1920" loading="lazy" decoding="async"></div>
+        <div class="about-carousel-slide"><img src="img/about-2.jpg" alt="Berlin neighbourhood" width="1920" height="1440" loading="lazy" decoding="async"></div>
+        <div class="about-carousel-slide"><img src="img/about-3.jpg" alt="Therapy room" width="2016" height="1512" loading="lazy" decoding="async"></div>
       </div>
       <div class="about-carousel-dots" role="tablist" aria-label="Slide navigation">
         <button type="button" class="about-carousel-dot active" aria-label="Slide 1"></button>
         <button type="button" class="about-carousel-dot" aria-label="Slide 2"></button>
-        <button type="button" class="about-carousel-dot" aria-label="Slide 3"></button> 
-        <button type="button" class="about-carousel-dot" aria-label="Slide 4"></button>
-        <button type="button" class="about-carousel-dot" aria-label="Slide 5"></button>
-        <button type="button" class="about-carousel-dot" aria-label="Slide 6"></button>
-        <button type="button" class="about-carousel-dot" aria-label="Slide 7"></button>
+        <button type="button" class="about-carousel-dot" aria-label="Slide 3"></button>
       </div>
     </div>
   </div>
@@ -811,17 +807,17 @@
       <div class="credential"><div class="cred-dot"></div><span data-i18n="cred6">Speaker on LGBTQIA+ identities in education</span></div>
     </div>
     <div class="about-links">
-      <a href="https://www.youtube.com/watch?v=OXZpMfzVSQA" target="_blank" rel="noopener" class="about-link">
-        <span class="about-link-icon">▶</span>
-        <span>Interview - PodNagringa Podcast</span>
+      <a href="https://www.dw.com/pt-br/projeto-coordenado-por-brasileiro-ganha-pr%C3%AAmio-na-alemanha/a-39239467" target="_blank" rel="noopener" class="about-link">
+        <span class="about-link-icon">↗</span>
+        <span>DW — Projeto coordenado por brasileiro ganha prêmio na Alemanha</span>
       </a>
       <a href="https://www.youtube.com/watch?v=ZFkNJIEnH1E&t=2s" target="_blank" rel="noopener" class="about-link">
         <span class="about-link-icon">▶</span>
-        <span>Interview - Psicast Vibe Podcast</span>
+        <span>Interview — Psicast Vibe Podcast</span>
       </a>
       <a href="https://taz.de/Die-Verstaendnisfrage/!5938626/" target="_blank" rel="noopener" class="about-link">
         <span class="about-link-icon">↗</span>
-        <span>TAZ - Die Verstandnisfrage</span>
+        <span>taz — Die Verständnisfrage: LGBTQIA+ betrifft alle</span>
       </a>
     </div>
   </div>
