@@ -443,6 +443,7 @@
     display: flex;
     align-items: stretch;
     min-height: 420px;
+    aspect-ratio: 4 / 5;
   }
   .hero-img img {
     width: 100%;
@@ -586,7 +587,12 @@
     min-width: 0;
     aspect-ratio: 4 / 3;
   }
-  .about-carousel { width: 100%; height: 100%; position: relative; }
+  .about-carousel {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
   .about-carousel-track {
     display: flex;
     height: 100%;
@@ -833,13 +839,20 @@
   .faq-a { font-size: 13px; color: var(--char-light); line-height: 1.7; max-height: 0; overflow: hidden; transition: max-height .4s ease, padding .3s; }
   .faq-item.open .faq-a { max-height: 300px; padding-bottom: 18px; }
 
+  /* TABLET */
+  @media (max-width: 1024px) {
+    .hero-img { aspect-ratio: 3 / 4; min-height: 360px; }
+    .about-img { aspect-ratio: 4 / 3; }
+  }
+
   /* MOBILE */
   @media (max-width: 768px) {
     .nav-links, .nav-cta { display: none; }
     .hamburger { display: flex; }
     .lang-switcher { display: none; }
     .hero { grid-template-columns: 1fr; }
-    .hero-img { min-height: 260px; order: -1; }
+    .hero-img { aspect-ratio: 3 / 4; min-height: auto; max-height: 72vh; order: -1; }
+    .hero-img img { object-position: center 20%; }
     .hero-img-placeholder { min-height: 260px; }
     .hero-text { padding: 36px 5vw; }
     .trust-bar { grid-template-columns: 1fr; }
@@ -847,7 +860,8 @@
     .trust-item:last-child { border-bottom: none; }
     .approaches-grid { grid-template-columns: 1fr; }
     .about { grid-template-columns: 1fr; gap: 28px; }
-    .about-img { aspect-ratio: 4/3; }
+    .about-img { aspect-ratio: 4 / 3; width: 100%; }
+    .about-carousel-slide img { object-position: center; }
     .pricing-grid { grid-template-columns: 1fr; }
     .reviews-grid { grid-template-columns: 1fr; }
     .contact { grid-template-columns: 1fr; gap: 32px; }
@@ -922,7 +936,7 @@
 <section class="hero">
   <div class="hero-text">
     <div class="eyebrow" data-i18n="heroEyebrow">Psychologist (UFRJ, Brazil) · Berlin · Online worldwide</div>
-    <h1 class="hero-h1" data-i18n="heroH1">A co-created space to allow yourself to be, <em>feel and have deep insights</em></h1>
+    <h1 class="hero-h1" data-i18n="heroH1">A co-created space to allow yourself to be, feel and have deep insights.</h1>
     <p class="hero-sub" data-i18n="heroSub">Therapy and counselling in English, German, and Portuguese - for expats, LGBTQIA+ people, high abilities and anyone working through identity, relationships, or emotional complexity.</p>
     <div class="hero-ctas">
       <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" data-i18n="heroCta1">Write to me</button>
@@ -1167,6 +1181,7 @@
   <div class="footer-links">
     <a href="/impressum.html" data-i18n="footerImprint">Impressum</a>
     <a href="/datenschutz.html" data-i18n="footerPrivacy">Datenschutzerklärung</a>
+    <a href="https://complicated.life/de/dwsoares" target="_blank" rel="noopener">It's complicated</a>
     <a href="mailto:info@dwsoares.com">info@dwsoares.com</a>
   </div>
   <div class="footer-copy">© 2025 D Wiltshire Soares</div>
@@ -1179,7 +1194,7 @@ const i18n = {
     navTherapy:"Therapy and counselling", navAbout:"About", navPricing:"Prices", navContact:"Contact", navCta:"Book a call",
     availText:"Currently accepting new clients — online and Berlin in-person", availCta:"Book a free intro call",
     heroEyebrow:"Psychologist (UFRJ, Brazil) · Berlin · Online worldwide",
-    heroH1:"A co-created space to allow yourself to be, <em>feel and have deep insights</em>",
+    heroH1:"A co-created space to allow yourself to be, feel and have deep insights.",
     heroSub:"Therapy and counselling in English, German, and Portuguese - for expats, LGBTQIA+ people, high abilities and anyone working through identity, relationships, or emotional complexity.",
     heroCta1:"Write to me", heroCta2:"How therapy works",
     trust1Title:"Psychotherapie nach dem Heilpraktikergesetz", trust1Sub:"Licensed by Berlin Health Authority, 2023",
