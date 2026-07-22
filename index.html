@@ -757,6 +757,18 @@
   textarea { resize: vertical; min-height: 100px; }
   select { appearance: none; cursor: pointer; }
   .form-note { font-size: 11px; color: var(--char-light); line-height: 1.55; }
+  .form-success {
+    display: none;
+    margin-top: 4px;
+    padding: 14px 16px;
+    border-radius: var(--r);
+    background: var(--sand-lighter);
+    border: 0.5px solid var(--sand-light);
+    font-size: 13px;
+    color: var(--char-mid);
+    line-height: 1.65;
+  }
+  .form-success.visible { display: block; }
   .form-submit {
     font-family: 'DM Sans', sans-serif;
     font-size: 13px;
@@ -1171,6 +1183,7 @@
       <textarea name="message" required></textarea>
     </label>
     <p class="form-note" data-i18n="formNote">Your message is private. I'll reply within 2 business days.</p>
+    <div id="formSuccess" class="form-success" role="status" aria-live="polite" data-i18n="formSuccess">Thank you — your message reached me. I'll reply within two business days.</div>
     <button type="submit" class="form-submit" data-i18n="formSubmit">Send message →</button>
   </form>
 </section>
@@ -1236,6 +1249,7 @@ const i18n = {
     formName:"Name", formEmail:"Email", formLang:"Preferred language", formLangSelect:"Select a language",
     formMessage:"What brings you here?",
     formNote:"Your message is private. I'll reply within 2 business days.", formSubmit:"Send message →",
+    formSuccess:"Thank you — your message reached me. I'll reply within two business days.",
     formSent:"Sent!", formError:"Error — please try again",
     footerCtaTitle:"Ready when you are.", footerCtaSub:"Free intro call · No commitment · Online or Berlin in-person", footerCtaBtn:"Book a call",
     footerImprint:"Impressum", footerPrivacy:"Datenschutzerklärung",
@@ -1294,6 +1308,7 @@ const i18n = {
     formName:"Name", formEmail:"E-Mail", formLang:"Bevorzugte Sprache", formLangSelect:"Sprache wählen",
     formMessage:"Was bringt Sie zu mir?",
     formNote:"Ihre Nachricht ist vertraulich. Ich antworte innerhalb von zwei Werktagen.", formSubmit:"Nachricht senden →",
+    formSuccess:"Vielen Dank — Ihre Nachricht ist bei mir angekommen. Ich melde mich innerhalb von zwei Werktagen bei Ihnen.",
     formSent:"Gesendet!", formError:"Fehler — bitte erneut versuchen",
     footerCtaTitle:"Bereit, wenn Sie es sind.", footerCtaSub:"Kostenloses Erstgespräch · Keine Verpflichtung · Online oder Berlin", footerCtaBtn:"Termin buchen",
     footerImprint:"Impressum", footerPrivacy:"Datenschutzerklärung",
@@ -1352,6 +1367,7 @@ const i18n = {
     formName:"Nome", formEmail:"E-mail", formLang:"Idioma preferido", formLangSelect:"Escolha o idioma",
     formMessage:"O que te traz aqui?",
     formNote:"Sua mensagem é privada. Responderei em até dois dias úteis.", formSubmit:"Enviar mensagem →",
+    formSuccess:"Obrigado — sua mensagem chegou até mim. Responderei em até dois dias úteis.",
     formSent:"Enviado!", formError:"Erro — tente novamente",
     footerCtaTitle:"Pronto quando você estiver.", footerCtaSub:"Conversa gratuita · Sem compromisso · Online ou presencial em Berlim", footerCtaBtn:"Agendar conversa",
     footerImprint:"Impressum", footerPrivacy:"Política de privacidade",
@@ -1392,8 +1408,10 @@ function handleSubmit(e) {
   e.preventDefault();
   const form = e.target;
   const btn = form.querySelector('.form-submit');
+  const success = document.getElementById('formSuccess');
   const t = i18n[currentLang];
   const origText = t.formSubmit;
+  success.classList.remove('visible');
   btn.disabled = true;
   btn.style.opacity = '.6';
   fetch(form.action, {
@@ -1402,8 +1420,11 @@ function handleSubmit(e) {
     headers: { 'Accept': 'application/json' }
   }).then(res => {
     if (!res.ok) throw new Error();
-    btn.textContent = t.formSent;
     form.reset();
+    btn.textContent = origText;
+    btn.disabled = false;
+    btn.style.opacity = '1';
+    success.classList.add('visible');
   }).catch(() => {
     btn.textContent = t.formError;
     btn.disabled = false;
