@@ -1,7 +1,3 @@
 node_modules/
-package.json
 package-lock.json
-temp-old.html
-extract-images.mjs
-find-images.mjs
-download-images.mjs
+dist/
