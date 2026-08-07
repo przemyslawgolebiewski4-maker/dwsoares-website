@@ -51,8 +51,10 @@ function shouldExtractScript(attrs) {
 
 function bustLocalAssets(html, buildId) {
   const addV = (url) => {
-    if (!url || /^https?:\/\//i.test(url) || url.startsWith('//') || url.startsWith('data:')) return url;
-    if (url.startsWith('/assets/')) return url; // content hash is the cache buster
+    if (!url || url.startsWith('data:')) return url;
+    const isOwn = (u) => /^https?:\/\/(www\.)?dwsoares\.com/i.test(u) || !/^https?:\/\//i.test(u);
+    if (!isOwn(url)) return url;
+    if (url.startsWith('/assets/')) return url;
     const sep = url.includes('?') ? '&' : '?';
     if (url.includes(`v=${buildId}`)) return url;
     return `${url}${sep}v=${buildId}`;
